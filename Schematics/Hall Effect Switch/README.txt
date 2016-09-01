@@ -6,5 +6,4 @@ Reversing the magnetic field will reverse the state of the switch.
 STATUS: 
 Hall Effect Power.brd - Broken
 
-TODO: Add a resistor
 TODO: Add parts list
