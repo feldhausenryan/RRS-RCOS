@@ -1,2 +1,2 @@
-# RRS-Secret
-Closed Source Schematics, Code, etc.
+# RRS-RCOS
+Open Source Schematics, Code, etc.
