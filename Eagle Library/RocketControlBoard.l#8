@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -250,6 +250,36 @@
 <wire x1="-1.27" y1="3.81" x2="1.27" y2="3.81" width="0.127" layer="21"/>
 <wire x1="1.27" y1="3.81" x2="1.27" y2="6.35" width="0.127" layer="21"/>
 </package>
+<package name="HEADER-SIDE-A">
+<pad name="A5" x="0" y="0" drill="1.4"/>
+<pad name="D0" x="0" y="2.54" drill="1.4"/>
+<pad name="D1" x="0" y="5.08" drill="1.4"/>
+<pad name="D2" x="0" y="7.62" drill="1.4"/>
+<pad name="D3" x="0" y="10.16" drill="1.4"/>
+<pad name="A4" x="0" y="-2.54" drill="1.4"/>
+<pad name="A3" x="0" y="-5.08" drill="1.4"/>
+<pad name="A2" x="0" y="-7.62" drill="1.4"/>
+<pad name="A1" x="0" y="-10.16" drill="1.4"/>
+<pad name="A0" x="0" y="-12.7" drill="1.4"/>
+<pad name="D4" x="0" y="12.7" drill="1.4"/>
+<pad name="D5" x="0" y="15.24" drill="1.4"/>
+<pad name="D6" x="0" y="17.78" drill="1.4"/>
+<pad name="AREF" x="0" y="-15.24" drill="1.4"/>
+<text x="-1.905" y="-15.24" size="0.8128" layer="21" rot="R90" align="center">AREF</text>
+<text x="-1.905" y="-12.7" size="0.8128" layer="21" rot="R90" align="center">A0</text>
+<text x="-1.905" y="-10.16" size="0.8128" layer="21" rot="R90" align="center">A1</text>
+<text x="-1.905" y="-7.62" size="0.8128" layer="21" rot="R90" align="center">A2</text>
+<text x="-1.905" y="-5.08" size="0.8128" layer="21" rot="R90" align="center">A3</text>
+<text x="-1.905" y="-2.54" size="0.8128" layer="21" rot="R90" align="center">A4</text>
+<text x="-1.905" y="0" size="0.8128" layer="21" rot="R90" align="center">A5</text>
+<text x="-1.905" y="2.54" size="0.8128" layer="21" rot="R90" align="center">0</text>
+<text x="-1.905" y="5.08" size="0.8128" layer="21" rot="R90" align="center">1</text>
+<text x="-1.905" y="7.62" size="0.8128" layer="21" rot="R90" align="center">2</text>
+<text x="-1.905" y="10.16" size="0.8128" layer="21" rot="R90" align="center">3</text>
+<text x="-1.905" y="12.7" size="0.8128" layer="21" rot="R90" align="center">4</text>
+<text x="-1.905" y="15.24" size="0.8128" layer="21" rot="R90" align="center">5</text>
+<text x="-1.905" y="17.78" size="0.8128" layer="21" rot="R90" align="center">6</text>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -481,6 +511,30 @@ USB</text>
 <pin name="D4" x="-5.08" y="-27.94" length="middle"/>
 <pin name="D5" x="-5.08" y="-30.48" length="middle"/>
 <pin name="D6" x="-5.08" y="-33.02" length="middle"/>
+<wire x1="0" y1="-35.56" x2="7.62" y2="-35.56" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-35.56" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-35.56" width="0.254" layer="94"/>
+</symbol>
+<symbol name="HEADER-SIDE-B">
+<pin name="VIN" x="0" y="0" length="middle"/>
+<pin name="GND-IN" x="0" y="-2.54" length="middle"/>
+<pin name="USB" x="0" y="-5.08" length="middle"/>
+<pin name="GND-OUT" x="0" y="-7.62" length="middle"/>
+<pin name="3V3" x="0" y="-10.16" length="middle"/>
+<pin name="SCL" x="0" y="-12.7" length="middle"/>
+<pin name="SDA" x="0" y="-15.24" length="middle"/>
+<pin name="13" x="0" y="-17.78" length="middle"/>
+<pin name="12" x="0" y="-20.32" length="middle"/>
+<pin name="11" x="0" y="-22.86" length="middle"/>
+<pin name="10" x="0" y="-25.4" length="middle"/>
+<pin name="9" x="0" y="-27.94" length="middle"/>
+<pin name="8" x="0" y="-30.48" length="middle"/>
+<pin name="7" x="0" y="-33.02" length="middle"/>
+<wire x1="5.08" y1="-35.56" x2="17.78" y2="-35.56" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-35.56" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-35.56" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>

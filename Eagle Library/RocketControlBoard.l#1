@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -310,6 +310,22 @@
 <text x="-33.02" y="-1.905" size="0.8128" layer="21" align="center">8</text>
 <text x="-35.56" y="-1.905" size="0.8128" layer="21" align="center">7</text>
 </package>
+<package name="8-WFDFN-EXPOSED-PAD">
+<smd name="PGND" x="0" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="EXPOSED-THERMAL-PAD" x="0.75" y="0.95" dx="1.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="VIN" x="0.5" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="EN" x="1" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="AGND" x="1.5" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="PG" x="0" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="SW" x="0.5" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="VOS" x="1" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="FB" x="1.5" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<wire x1="-0.3" y1="-0.1" x2="-0.3" y2="2" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="2" x2="1.8" y2="2" width="0.127" layer="21"/>
+<wire x1="1.8" y1="2" x2="1.8" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-0.1" x2="-0.3" y2="-0.1" width="0.127" layer="21"/>
+<circle x="-0.3" y="-0.1" radius="0.1" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -565,6 +581,21 @@ USB</text>
 <wire x1="17.78" y1="-35.56" x2="17.78" y2="2.54" width="0.254" layer="94"/>
 <wire x1="17.78" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
 <wire x1="5.08" y1="2.54" x2="5.08" y2="-35.56" width="0.254" layer="94"/>
+</symbol>
+<symbol name="REGULATOR">
+<pin name="PGND" x="-15.24" y="2.54" length="middle"/>
+<pin name="VIN" x="-15.24" y="0" length="middle"/>
+<pin name="EN" x="-15.24" y="-2.54" length="middle"/>
+<pin name="AGND" x="-15.24" y="-5.08" length="middle"/>
+<pin name="PG" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="SW" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="VOS" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="FB" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<pin name="ETP" x="0" y="-15.24" length="middle" rot="R90"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -870,6 +901,22 @@ USB</text>
 </gates>
 <devices>
 <device name="" package="HEADER-SIDE-B">
+<connects>
+<connect gate="G$1" pin="10" pad="D10"/>
+<connect gate="G$1" pin="11" pad="D11"/>
+<connect gate="G$1" pin="12" pad="D12"/>
+<connect gate="G$1" pin="13" pad="D13"/>
+<connect gate="G$1" pin="3V3" pad="3V3"/>
+<connect gate="G$1" pin="7" pad="D7"/>
+<connect gate="G$1" pin="8" pad="D8"/>
+<connect gate="G$1" pin="9" pad="D9"/>
+<connect gate="G$1" pin="GND-IN" pad="GND-IN"/>
+<connect gate="G$1" pin="GND-OUT" pad="GND-OUT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="USB" pad="USB"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

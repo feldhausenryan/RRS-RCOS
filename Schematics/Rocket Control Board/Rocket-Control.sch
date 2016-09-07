@@ -309,6 +309,22 @@
 <text x="-33.02" y="-1.905" size="0.8128" layer="21" align="center">8</text>
 <text x="-35.56" y="-1.905" size="0.8128" layer="21" align="center">7</text>
 </package>
+<package name="8-WFDFN-EXPOSED-PAD">
+<smd name="PGND" x="0" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="EXPOSED-THERMAL-PAD" x="0.75" y="0.95" dx="1.6" dy="0.9" layer="1" rot="R180"/>
+<smd name="VIN" x="0.5" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="EN" x="1" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="AGND" x="1.5" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="PG" x="0" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="SW" x="0.5" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="VOS" x="1" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<smd name="FB" x="1.5" y="1.9" dx="0.5" dy="0.28" layer="1" rot="R90"/>
+<wire x1="-0.3" y1="-0.1" x2="-0.3" y2="2" width="0.127" layer="21"/>
+<wire x1="-0.3" y1="2" x2="1.8" y2="2" width="0.127" layer="21"/>
+<wire x1="1.8" y1="2" x2="1.8" y2="-0.1" width="0.127" layer="21"/>
+<wire x1="1.8" y1="-0.1" x2="-0.3" y2="-0.1" width="0.127" layer="21"/>
+<circle x="-0.3" y="-0.1" radius="0.1" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -560,6 +576,21 @@ USB</text>
 <wire x1="17.78" y1="-35.56" x2="17.78" y2="2.54" width="0.254" layer="94"/>
 <wire x1="17.78" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
 <wire x1="5.08" y1="2.54" x2="5.08" y2="-35.56" width="0.254" layer="94"/>
+</symbol>
+<symbol name="REGULATOR">
+<pin name="PGND" x="-15.24" y="2.54" length="middle"/>
+<pin name="VIN" x="-15.24" y="0" length="middle"/>
+<pin name="EN" x="-15.24" y="-2.54" length="middle"/>
+<pin name="AGND" x="-15.24" y="-5.08" length="middle"/>
+<pin name="PG" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="SW" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="VOS" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="FB" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<pin name="ETP" x="0" y="-15.24" length="middle" rot="R90"/>
+<wire x1="-10.16" y1="-10.16" x2="-10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -872,6 +903,29 @@ USB</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="REGULATOR">
+<gates>
+<gate name="G$1" symbol="REGULATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="8-WFDFN-EXPOSED-PAD">
+<connects>
+<connect gate="G$1" pin="AGND" pad="AGND"/>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="ETP" pad="EXPOSED-THERMAL-PAD"/>
+<connect gate="G$1" pin="FB" pad="FB"/>
+<connect gate="G$1" pin="PG" pad="PG"/>
+<connect gate="G$1" pin="PGND" pad="PGND"/>
+<connect gate="G$1" pin="SW" pad="SW"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+<connect gate="G$1" pin="VOS" pad="VOS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -972,6 +1026,7 @@ USB</text>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 <part name="U$21" library="RocketControlBoard" deviceset="HEADER-SIDE-A" device=""/>
 <part name="U$22" library="RocketControlBoard" deviceset="HEADER-SIDE-B" device=""/>
+<part name="U$5" library="RocketControlBoard" deviceset="REGULATOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1014,6 +1069,7 @@ USB</text>
 <instance part="+3V7" gate="G$1" x="165.1" y="-45.72"/>
 <instance part="U$21" gate="G$1" x="48.26" y="-40.64" rot="R180"/>
 <instance part="U$22" gate="G$1" x="104.14" y="-40.64" rot="R180"/>
+<instance part="U$5" gate="G$1" x="-33.02" y="-50.8"/>
 </instances>
 <busses>
 </busses>
@@ -1618,21 +1674,11 @@ USB</text>
 </segment>
 <segment>
 <pinref part="U$56" gate="G$1" pin="P$1"/>
-<wire x1="185.42" y1="35.56" x2="175.26" y2="35.56" width="0.1524" layer="91"/>
-<label x="175.26" y="35.56" size="1.778" layer="95"/>
+<wire x1="185.42" y1="35.56" x2="167.64" y2="35.56" width="0.1524" layer="91"/>
+<label x="167.64" y="35.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VIN" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="VDDIN:VIN"/>
-<wire x1="111.76" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
-<label x="124.46" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="175.26" y1="55.88" x2="185.42" y2="55.88" width="0.1524" layer="91"/>
-<label x="175.26" y="55.88" size="1.778" layer="95"/>
-<pinref part="U$57" gate="G$1" pin="P$1"/>
-</segment>
 <segment>
 <wire x1="109.22" y1="-40.64" x2="104.14" y2="-40.64" width="0.1524" layer="91"/>
 <pinref part="U$22" gate="G$1" pin="VIN"/>
@@ -1680,6 +1726,18 @@ USB</text>
 <pinref part="U$1" gate="G$1" pin="PB22:TX"/>
 <wire x1="111.76" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
 <label x="124.46" y="40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VIN-REGULATED" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VDDIN:VIN"/>
+<wire x1="111.76" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
+<label x="124.46" y="58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<wire x1="167.64" y1="55.88" x2="185.42" y2="55.88" width="0.1524" layer="91"/>
+<label x="167.64" y="55.88" size="1.778" layer="95"/>
+<pinref part="U$57" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 </nets>
