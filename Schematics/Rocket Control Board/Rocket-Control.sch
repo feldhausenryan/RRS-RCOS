@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -325,6 +325,15 @@
 <wire x1="1.8" y1="-0.1" x2="-0.3" y2="-0.1" width="0.127" layer="21"/>
 <circle x="-0.3" y="-0.1" radius="0.1" width="0.127" layer="21"/>
 </package>
+<package name="SOD-882">
+<smd name="P$1" x="0" y="0" dx="0.55" dy="0.3" layer="1" rot="R90"/>
+<smd name="P$2" x="0.65" y="0" dx="0.3" dy="0.55" layer="1" rot="R180"/>
+<wire x1="0.23495" y1="0.127" x2="0.23495" y2="-0.127" width="0.0635" layer="21"/>
+<wire x1="0.23495" y1="-0.127" x2="0.42545" y2="0" width="0.0635" layer="21"/>
+<wire x1="0.42545" y1="0" x2="0.23495" y2="0.127" width="0.0635" layer="21"/>
+<wire x1="0.42545" y1="-0.127" x2="0.42545" y2="0" width="0.0635" layer="21"/>
+<wire x1="0.42545" y1="0" x2="0.42545" y2="0.127" width="0.0635" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -618,6 +627,15 @@ USB</text>
 <wire x1="7.62" y1="2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
 <text x="0" y="5.08" size="1.778" layer="94" align="center">Resistor</text>
+</symbol>
+<symbol name="DIODE">
+<pin name="P$1" x="-12.7" y="0" length="middle"/>
+<pin name="P$2" x="12.7" y="0" length="middle" rot="R180"/>
+<text x="0" y="10.16" size="1.778" layer="94" align="center">Diode</text>
+<wire x1="7.62" y1="0" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1001,6 +1019,22 @@ USB</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="REGULATION-DIODE">
+<gates>
+<gate name="G$1" symbol="DIODE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOD-882">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -1109,6 +1143,7 @@ USB</text>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
+<part name="U$15" library="RocketControlBoard" deviceset="REGULATION-DIODE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1159,6 +1194,7 @@ USB</text>
 <instance part="GND10" gate="1" x="-96.52" y="-63.5"/>
 <instance part="GND11" gate="1" x="2.54" y="-73.66"/>
 <instance part="GND16" gate="1" x="-60.96" y="-63.5"/>
+<instance part="U$15" gate="G$1" x="78.74" y="-71.12"/>
 </instances>
 <busses>
 </busses>
@@ -1766,6 +1802,11 @@ USB</text>
 <wire x1="104.14" y1="-35.56" x2="109.22" y2="-35.56" width="0.1524" layer="91"/>
 <label x="109.22" y="-35.56" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$15" gate="G$1" pin="P$1"/>
+<wire x1="66.04" y1="-71.12" x2="50.8" y2="-71.12" width="0.1524" layer="91"/>
+<label x="50.8" y="-71.12" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RX" class="0">
 <segment>
@@ -1816,6 +1857,11 @@ USB</text>
 <wire x1="-81.28" y1="-45.72" x2="-81.28" y2="-43.18" width="0.1524" layer="91"/>
 <wire x1="-96.52" y1="-35.56" x2="-106.68" y2="-35.56" width="0.1524" layer="91"/>
 <label x="-111.76" y="-35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$15" gate="G$1" pin="P$2"/>
+<wire x1="91.44" y1="-71.12" x2="109.22" y2="-71.12" width="0.1524" layer="91"/>
+<label x="104.14" y="-71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A5" class="0">

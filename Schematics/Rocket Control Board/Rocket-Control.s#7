@@ -1624,11 +1624,6 @@ USB</text>
 </net>
 <net name="VIN" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="VDDIN:VIN"/>
-<wire x1="111.76" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
-<label x="124.46" y="58.42" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="175.26" y1="55.88" x2="185.42" y2="55.88" width="0.1524" layer="91"/>
 <label x="175.26" y="55.88" size="1.778" layer="95"/>
 <pinref part="U$57" gate="G$1" pin="P$1"/>
@@ -1680,6 +1675,13 @@ USB</text>
 <pinref part="U$1" gate="G$1" pin="PB22:TX"/>
 <wire x1="111.76" y1="40.64" x2="121.92" y2="40.64" width="0.1524" layer="91"/>
 <label x="124.46" y="40.64" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="VIN-REGULATED" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VDDIN:VIN"/>
+<wire x1="111.76" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
+<label x="124.46" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

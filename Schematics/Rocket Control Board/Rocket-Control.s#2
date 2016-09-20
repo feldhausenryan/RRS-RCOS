@@ -1027,7 +1027,6 @@ USB</text>
 <part name="U$21" library="RocketControlBoard" deviceset="HEADER-SIDE-A" device=""/>
 <part name="U$22" library="RocketControlBoard" deviceset="HEADER-SIDE-B" device=""/>
 <part name="U$5" library="RocketControlBoard" deviceset="REGULATOR" device=""/>
-<part name="U$11" library="RocketControlBoard" deviceset="REGULATOR" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1071,7 +1070,6 @@ USB</text>
 <instance part="U$21" gate="G$1" x="48.26" y="-40.64" rot="R180"/>
 <instance part="U$22" gate="G$1" x="104.14" y="-40.64" rot="R180"/>
 <instance part="U$5" gate="G$1" x="-33.02" y="-50.8"/>
-<instance part="U$11" gate="G$1" x="-25.4" y="-33.02"/>
 </instances>
 <busses>
 </busses>
