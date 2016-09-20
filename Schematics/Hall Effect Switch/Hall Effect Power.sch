@@ -7118,7 +7118,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="43.18" y1="30.48" x2="45.72" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="30.48" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
-<label x="88.9" y="40.64" size="1.778" layer="95"/>
+<label x="88.9" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HALL_OUT" class="0">
@@ -7147,7 +7147,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="45.72" y1="48.26" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="48.26" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
-<label x="35.56" y="48.26" size="1.778" layer="95"/>
+<label x="40.64" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

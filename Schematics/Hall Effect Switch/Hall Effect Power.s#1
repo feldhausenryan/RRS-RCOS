@@ -7096,11 +7096,12 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <busses>
 </busses>
 <nets>
-<net name="N$4" class="0">
+<net name="VIN_OUT" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="S"/>
 <wire x1="68.58" y1="27.94" x2="73.66" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="OUTPUT+" gate="G$1" pin="P$1"/>
+<label x="68.58" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -7117,9 +7118,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="43.18" y1="30.48" x2="45.72" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="30.48" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
+<label x="88.9" y="40.64" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$1" class="0">
+<net name="HALL_OUT" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="IC1" gate="G$1" pin="OUT"/>
@@ -7127,9 +7129,10 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="43.18" y1="33.02" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="33.02" x2="63.5" y2="33.02" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="43.18" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
+<label x="50.8" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="VIN" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="C1" gate="G$1" pin="1"/>
@@ -7144,6 +7147,7 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <pinref part="Q1" gate="G$1" pin="D"/>
 <wire x1="45.72" y1="48.26" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="48.26" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
+<label x="35.56" y="48.26" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
