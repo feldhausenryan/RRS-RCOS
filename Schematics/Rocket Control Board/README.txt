@@ -1,18 +1,13 @@
-The rocket control board will combine an arduino with a GPS and wireless radio to enable the customization of an arduino with the tracking ability of gps. 
+October 18, 2016 by Ryan Feldhausen
 
-Potential RF Kit
-XB9X-DMRS-001 (SMT Board $35)
-XK9X-DMS-0    (Dev Board $199)
-(Maybe this is a bit expensive)
+The Rocket Control Board is an Arduino Zero clone. 
+In the future the board will be used to mount various surface mounted components to 
+create an Arduino compatible rocket control board.
 
-
-
-STATUS: Incomplete
-
-TODO: Make Schematic
-TODO: Pick out arduino
-TODO: Pick out GPS
-TODO: Pick out radio module
-TODO: Parts list
-TODO: SD card
-TODO: Lipo slot?
+Folder Contents
+Misc - Various pictures or other files that may aid the development or understanding
+       of the schematics or boards in this section.
+	   
+Version - The various stages of development of the schematic / board for this section. 
+          There is no guarantee that any of the Version-X folders will contain 
+		  functional schematics or boards. 
