@@ -866,7 +866,7 @@ USB</text>
 <gate name="G$1" symbol="AREF-CAPACITORS" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="C0603">
+<device name="" package="C0402">
 <connects>
 <connect gate="G$1" pin="P$1" pad="1"/>
 <connect gate="G$1" pin="P$2" pad="2"/>

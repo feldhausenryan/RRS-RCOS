@@ -1085,7 +1085,7 @@ USB</text>
 <gate name="G$1" symbol="REGULATOR-CAPACITORS" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="C0603">
+<device name="" package="C0402">
 <connects>
 <connect gate="G$1" pin="A" pad="1"/>
 <connect gate="G$1" pin="B" pad="2"/>

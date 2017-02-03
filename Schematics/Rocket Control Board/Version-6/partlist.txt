@@ -1,0 +1,38 @@
+Partlist
+
+Exported from Rocket-Control5.brd at 1/31/2017 11:23 PM
+
+EAGLE Version 7.6.0 Copyright (c) 1988-2016 CadSoft
+
+Assembly variant: 
+
+Part                    Value               Package             Library            Position (inch)       Orientation
+
+ANALOG-CAPACITOR-1      0.1uF               C0402               RocketControlBoard (0.59 0.405)          R90
+ANALOG-CAPACITOR-2      10uF                C0402               RocketControlBoard (0.646 0.405)         R90
+AREF-CAPACITOR-1        0.1uF               C0402               RocketControlBoard (0.475 0.364)         R90
+AREF-CAPACITOR-2        4.7uF               C0402               RocketControlBoard (0.534 0.364)         R90
+ARM-CORTEX-MO+          ATSAML21G18B-AUT    TQFP48              RocketControlBoard (0.425 0.65)          R45
+CRYSTAL-CAP-1           6.8pF               C0603               RocketControlBoard (0.496 0.246)         R180
+CRYSTAL-CAP-2           6.8pF               C0603               RocketControlBoard (0.496 0.165)         R180
+DIODE-USB               CTS05S40,L3F        SOD-882             RocketControlBoard (0.272 1.256)         R270
+DIODE-VIN               CTS05S40,L3F        SOD-882             RocketControlBoard (0.234 1.256)         R270
+FERRITE-BEAD            BLM18PG471SN1D      C0603               RocketControlBoard (0.619 0.277)         R0
+HEADER-SIDE-A           HEADER-SIDE-A       HEADER-SIDE-A       RocketControlBoard (0.75 0.65)           R0
+HEADER-SIDE-B           HEADER-SIDE-B       HEADER-SIDE-B       RocketControlBoard (0.05 1.55)           R90
+JTAG-CONNECTOR          JTAG-MINI           JTAG-MINI           RocketControlBoard (0.406 0.028)         R90
+LED-RESISTOR            330                 C0603               RocketControlBoard (0.595 1.356)         R180
+MICRO-USB-CONNECTOR     10118194-0001LF     10118194-0001LF     RocketControlBoard (0.341 1.446)         R270
+OSC-CRYSTAL             ABS25-32.768KHZ-6-T 4-SOJ:CRYSTAL       RocketControlBoard (0.279 0.269)         R180
+POWER-LED               APTD1608ZGC         C0603               RocketControlBoard (0.595 1.446)         R0
+REGULATOR-3.3V          TPS62172DSGR        8-WFDFN-EXPOSED-PAD RocketControlBoard (0.291 1.184)         R180
+REGULATOR-IN-CAPACITOR  10uF                C0402               RocketControlBoard (0.164 1.179)         R90
+REGULATOR-OUT-CAPACITOR 22uF                C0402               RocketControlBoard (0.164 1.056)         R270
+REGULATOR-OUT-INDUCTOR  2.2uH               C0603               RocketControlBoard (0.254 0.996)         R270
+SCL-PULLUP              4.7k                C0402               RocketControlBoard (0.164 0.812)         R270
+SDA-PULLUP              4.7k                C0402               RocketControlBoard (0.164 0.934)         R270
+SPI-PORT                SPI-PORT            SPI-PORT            RocketControlBoard (0.55 1.05)           R0
+VDDCORE-CAPACITOR       0.1uF               C0402               RocketControlBoard (0.234 0.426)         R270
+VDDIO-1                 0.1uF               C0402               RocketControlBoard (0.164 0.69)          R270
+VDDIO-2                 0.1uF               C0402               RocketControlBoard (0.627 0.831)         R270
+VIN-CAPACITOR           0.1uF               C0402               RocketControlBoard (0.281 0.426)         R270

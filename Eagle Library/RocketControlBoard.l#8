@@ -217,14 +217,7 @@
 <pad name="NC-3" x="1.905" y="3.175" drill="0.6"/>
 <pad name="NC-2" x="1.905" y="1.905" drill="0.6"/>
 <pad name="RESET" x="1.905" y="0.635" drill="0.6"/>
-<wire x1="0" y1="0" x2="2.54" y2="0" width="0.127" layer="21"/>
-<wire x1="2.54" y1="0" x2="2.54" y2="6.35" width="0.127" layer="21"/>
-<wire x1="2.54" y1="6.35" x2="1.27" y2="6.35" width="0.127" layer="21"/>
-<wire x1="1.27" y1="6.35" x2="0" y2="6.35" width="0.127" layer="21"/>
-<wire x1="0" y1="6.35" x2="0" y2="5.08" width="0.127" layer="21"/>
-<wire x1="0" y1="5.08" x2="0" y2="0" width="0.127" layer="21"/>
-<wire x1="0" y1="5.08" x2="1.27" y2="5.08" width="0.127" layer="21"/>
-<wire x1="1.27" y1="5.08" x2="1.27" y2="6.35" width="0.127" layer="21"/>
+<circle x="0" y="6.35" radius="0.127" width="0.127" layer="21"/>
 </package>
 <package name="SPI-PORT">
 <pad name="ATN" x="0" y="0" drill="0.9"/>

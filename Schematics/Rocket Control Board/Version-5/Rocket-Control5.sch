@@ -337,6 +337,9 @@
 <wire x1="0.42545" y1="-0.127" x2="0.42545" y2="0" width="0.0635" layer="21"/>
 <wire x1="0.42545" y1="0" x2="0.42545" y2="0.127" width="0.0635" layer="21"/>
 </package>
+<package name="HEADER-HOLE">
+<pad name="P$1" x="0" y="0" drill="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -667,6 +670,10 @@ USB</text>
 <wire x1="-7.62" y1="-2.54" x2="-7.62" y2="2.54" width="0.254" layer="94"/>
 <pin name="A" x="-12.7" y="0" length="middle"/>
 <pin name="B" x="12.7" y="0" length="middle" rot="R180"/>
+</symbol>
+<symbol name="HEADER-HOLE">
+<pin name="HOLE" x="-5.08" y="0" length="middle"/>
+<circle x="2.54" y="0" radius="2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1116,6 +1123,21 @@ USB</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="HEADER-HOLE">
+<gates>
+<gate name="G$1" symbol="HEADER-HOLE" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="HEADER-HOLE">
+<connects>
+<connect gate="G$1" pin="HOLE" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -1237,6 +1259,8 @@ USB</text>
 <part name="U$20" library="RocketControlBoard" deviceset="I2C-PULLUP" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
+<part name="U$23" library="RocketControlBoard" deviceset="HEADER-HOLE" device=""/>
+<part name="U$24" library="RocketControlBoard" deviceset="HEADER-HOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1300,6 +1324,8 @@ USB</text>
 <instance part="U$20" gate="G$1" x="157.48" y="-99.06"/>
 <instance part="+3V10" gate="G$1" x="177.8" y="-81.28"/>
 <instance part="GND19" gate="1" x="-81.28" y="-35.56"/>
+<instance part="U$23" gate="G$1" x="180.34" y="-15.24" rot="R180"/>
+<instance part="U$24" gate="G$1" x="147.32" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -2119,6 +2145,22 @@ USB</text>
 <segment>
 <pinref part="U$17" gate="G$1" pin="P$2"/>
 <pinref part="U$18" gate="G$1" pin="P$1"/>
+</segment>
+</net>
+<net name="USB-ID-CHIP" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="PA28:USB.HOST.ENABLE"/>
+<pinref part="U$24" gate="G$1" pin="HOLE"/>
+<wire x1="111.76" y1="50.8" x2="142.24" y2="50.8" width="0.1524" layer="91"/>
+<label x="124.46" y="50.8" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="USB-ID-BOARD" class="0">
+<segment>
+<pinref part="U$23" gate="G$1" pin="HOLE"/>
+<pinref part="U$38" gate="G$1" pin="ID"/>
+<wire x1="185.42" y1="-15.24" x2="205.74" y2="-15.24" width="0.1524" layer="91"/>
+<label x="185.42" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

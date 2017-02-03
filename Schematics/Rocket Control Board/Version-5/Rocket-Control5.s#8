@@ -276,15 +276,16 @@
 <text x="-1.905" y="12.7" size="0.8128" layer="21" rot="R90" align="center">4</text>
 <text x="-1.905" y="15.24" size="0.8128" layer="21" rot="R90" align="center">5</text>
 <text x="-1.905" y="17.78" size="0.8128" layer="21" rot="R90" align="center">6</text>
+<pad name="D7" x="0" y="20.32" drill="1"/>
+<text x="-1.905" y="20.32" size="0.8128" layer="21" rot="R90" align="center">7</text>
 </package>
 <package name="HEADER-SIDE-B">
-<pad name="D7" x="-35.56" y="0" drill="1"/>
-<pad name="D8" x="-33.02" y="0" drill="1"/>
-<pad name="D9" x="-30.48" y="0" drill="1"/>
-<pad name="D10" x="-27.94" y="0" drill="1"/>
-<pad name="D11" x="-25.4" y="0" drill="1"/>
-<pad name="D12" x="-22.86" y="0" drill="1"/>
-<pad name="D13" x="-20.32" y="0" drill="1"/>
+<pad name="D8" x="-38.1" y="0" drill="1"/>
+<pad name="D9" x="-35.56" y="0" drill="1"/>
+<pad name="D10" x="-33.02" y="0" drill="1"/>
+<pad name="D11" x="-30.48" y="0" drill="1"/>
+<pad name="D12" x="-27.94" y="0" drill="1"/>
+<pad name="D13" x="-25.4" y="0" drill="1"/>
 <pad name="SCL" x="-17.78" y="0" drill="1"/>
 <pad name="SDA" x="-15.24" y="0" drill="1"/>
 <pad name="3V3" x="-12.7" y="0" drill="1"/>
@@ -299,14 +300,17 @@
 <text x="-12.7" y="-1.905" size="0.8128" layer="21" align="center">3V3</text>
 <text x="-17.78" y="-1.905" size="0.8128" layer="21" align="center">SCL</text>
 <text x="-15.24" y="-1.905" size="0.8128" layer="21" align="center">SDA</text>
-<text x="-20.32" y="-1.905" size="0.8128" layer="21" align="center">13</text>
-<text x="-22.86" y="-1.905" size="0.8128" layer="21" align="center">12</text>
-<text x="-25.4" y="-1.905" size="0.8128" layer="21" align="center">11</text>
-<text x="-27.94" y="-1.905" size="0.8128" layer="21" align="center">10</text>
-<text x="-30.48" y="-1.905" size="0.8128" layer="21" align="center">9</text>
-<text x="-33.02" y="-1.905" size="0.8128" layer="21" align="center">8</text>
-<text x="-35.56" y="-1.905" size="0.8128" layer="21" align="center">7</text>
+<text x="-25.4" y="-1.905" size="0.8128" layer="21" align="center">13</text>
+<text x="-27.94" y="-1.905" size="0.8128" layer="21" align="center">12</text>
+<text x="-30.48" y="-1.905" size="0.8128" layer="21" align="center">11</text>
+<text x="-33.02" y="-1.905" size="0.8128" layer="21" align="center">10</text>
+<text x="-35.56" y="-1.905" size="0.8128" layer="21" align="center">9</text>
+<text x="-38.1" y="-1.905" size="0.8128" layer="21" align="center">8</text>
 <rectangle x1="-2.86" y1="-0.32" x2="-2.22" y2="0.32" layer="22"/>
+<pad name="RX" x="-22.86" y="0" drill="1"/>
+<pad name="TX" x="-20.32" y="0" drill="1"/>
+<text x="-22.86" y="-1.905" size="0.8128" layer="21" align="center">RX</text>
+<text x="-20.32" y="-1.905" size="0.8128" layer="21" align="center">TX</text>
 </package>
 <package name="8-WFDFN-EXPOSED-PAD">
 <smd name="PGND" x="0" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
@@ -332,9 +336,6 @@
 <wire x1="0.42545" y1="0" x2="0.23495" y2="0.127" width="0.0635" layer="21"/>
 <wire x1="0.42545" y1="-0.127" x2="0.42545" y2="0" width="0.0635" layer="21"/>
 <wire x1="0.42545" y1="0" x2="0.42545" y2="0.127" width="0.0635" layer="21"/>
-</package>
-<package name="HEADER-HOLE">
-<pad name="P$1" x="0" y="0" drill="1"/>
 </package>
 </packages>
 <symbols>
@@ -563,10 +564,11 @@ USB</text>
 <pin name="D4" x="-5.08" y="-27.94" length="middle"/>
 <pin name="D5" x="-5.08" y="-30.48" length="middle"/>
 <pin name="D6" x="-5.08" y="-33.02" length="middle"/>
-<wire x1="0" y1="-35.56" x2="7.62" y2="-35.56" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-35.56" x2="7.62" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-38.1" x2="7.62" y2="-38.1" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-38.1" x2="7.62" y2="2.54" width="0.254" layer="94"/>
 <wire x1="7.62" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="-35.56" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="-38.1" width="0.254" layer="94"/>
+<pin name="D7" x="-5.08" y="-35.56" length="middle"/>
 </symbol>
 <symbol name="HEADER-SIDE-B">
 <pin name="VIN" x="0" y="0" length="middle"/>
@@ -576,17 +578,18 @@ USB</text>
 <pin name="3V3" x="0" y="-10.16" length="middle"/>
 <pin name="SCL" x="0" y="-12.7" length="middle"/>
 <pin name="SDA" x="0" y="-15.24" length="middle"/>
-<pin name="13" x="0" y="-17.78" length="middle"/>
-<pin name="12" x="0" y="-20.32" length="middle"/>
-<pin name="11" x="0" y="-22.86" length="middle"/>
-<pin name="10" x="0" y="-25.4" length="middle"/>
-<pin name="9" x="0" y="-27.94" length="middle"/>
-<pin name="8" x="0" y="-30.48" length="middle"/>
-<pin name="7" x="0" y="-33.02" length="middle"/>
-<wire x1="5.08" y1="-35.56" x2="17.78" y2="-35.56" width="0.254" layer="94"/>
-<wire x1="17.78" y1="-35.56" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<pin name="13" x="0" y="-22.86" length="middle"/>
+<pin name="12" x="0" y="-25.4" length="middle"/>
+<pin name="11" x="0" y="-27.94" length="middle"/>
+<pin name="10" x="0" y="-30.48" length="middle"/>
+<pin name="9" x="0" y="-33.02" length="middle"/>
+<pin name="8" x="0" y="-35.56" length="middle"/>
+<wire x1="5.08" y1="-38.1" x2="17.78" y2="-38.1" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-38.1" x2="17.78" y2="2.54" width="0.254" layer="94"/>
 <wire x1="17.78" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-35.56" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-38.1" width="0.254" layer="94"/>
+<pin name="RX" x="0" y="-20.32" length="middle"/>
+<pin name="TX" x="0" y="-17.78" length="middle"/>
 </symbol>
 <symbol name="REGULATOR">
 <pin name="PGND" x="-15.24" y="2.54" length="middle"/>
@@ -638,10 +641,6 @@ USB</text>
 <wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="7.62" x2="7.62" y2="0" width="0.254" layer="94"/>
 <wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-</symbol>
-<symbol name="HEADER-HOLE">
-<pin name="HOLE" x="-5.08" y="0" length="middle"/>
-<circle x="2.54" y="0" radius="2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -919,6 +918,7 @@ USB</text>
 <connect gate="G$1" pin="D4" pad="D4"/>
 <connect gate="G$1" pin="D5" pad="D5"/>
 <connect gate="G$1" pin="D6" pad="D6"/>
+<connect gate="G$1" pin="D7" pad="D7"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -938,13 +938,14 @@ USB</text>
 <connect gate="G$1" pin="12" pad="D12"/>
 <connect gate="G$1" pin="13" pad="D13"/>
 <connect gate="G$1" pin="3V3" pad="3V3"/>
-<connect gate="G$1" pin="7" pad="D7"/>
 <connect gate="G$1" pin="8" pad="D8"/>
 <connect gate="G$1" pin="9" pad="D9"/>
 <connect gate="G$1" pin="GND-IN" pad="GND-IN"/>
 <connect gate="G$1" pin="GND-OUT" pad="GND-OUT"/>
+<connect gate="G$1" pin="RX" pad="RX"/>
 <connect gate="G$1" pin="SCL" pad="SCL"/>
 <connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="TX" pad="TX"/>
 <connect gate="G$1" pin="USB" pad="USB"/>
 <connect gate="G$1" pin="VIN" pad="VIN"/>
 </connects>
@@ -1034,21 +1035,6 @@ USB</text>
 <connects>
 <connect gate="G$1" pin="P$1" pad="P$1"/>
 <connect gate="G$1" pin="P$2" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="HEADER-HOLE">
-<gates>
-<gate name="G$1" symbol="HEADER-HOLE" x="-2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="HEADER-HOLE">
-<connects>
-<connect gate="G$1" pin="HOLE" pad="P$1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1168,8 +1154,6 @@ USB</text>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V8" library="supply1" deviceset="+3V3" device=""/>
-<part name="U$16" library="RocketControlBoard" deviceset="HEADER-HOLE" device=""/>
-<part name="U$17" library="RocketControlBoard" deviceset="HEADER-HOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -1224,8 +1208,6 @@ USB</text>
 <instance part="+3V4" gate="G$1" x="2.54" y="-30.48"/>
 <instance part="+3V5" gate="G$1" x="167.64" y="58.42"/>
 <instance part="+3V8" gate="G$1" x="142.24" y="58.42" rot="R270"/>
-<instance part="U$16" gate="G$1" x="129.54" y="-7.62" rot="R180"/>
-<instance part="U$17" gate="G$1" x="129.54" y="-12.7" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -1603,9 +1585,9 @@ USB</text>
 <label x="22.86" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-10.16" x2="104.14" y2="-10.16" width="0.1524" layer="91"/>
 <pinref part="U$22" gate="G$1" pin="8"/>
-<label x="109.22" y="-10.16" size="1.778" layer="95"/>
+<wire x1="109.22" y1="-5.08" x2="104.14" y2="-5.08" width="0.1524" layer="91"/>
+<label x="109.22" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D9" class="0">
@@ -1615,9 +1597,9 @@ USB</text>
 <label x="22.86" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-12.7" x2="104.14" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="U$22" gate="G$1" pin="9"/>
-<label x="109.22" y="-12.7" size="1.778" layer="95"/>
+<wire x1="104.14" y1="-7.62" x2="109.22" y2="-7.62" width="0.1524" layer="91"/>
+<label x="109.22" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D5" class="0">
@@ -1735,9 +1717,9 @@ USB</text>
 <label x="124.46" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-17.78" x2="104.14" y2="-17.78" width="0.1524" layer="91"/>
-<label x="109.22" y="-17.78" size="1.778" layer="95"/>
 <pinref part="U$22" gate="G$1" pin="11"/>
+<wire x1="104.14" y1="-12.7" x2="109.22" y2="-12.7" width="0.1524" layer="91"/>
+<label x="109.22" y="-12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D13" class="0">
@@ -1747,9 +1729,9 @@ USB</text>
 <label x="124.46" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-22.86" x2="104.14" y2="-22.86" width="0.1524" layer="91"/>
-<label x="109.22" y="-22.86" size="1.778" layer="95"/>
 <pinref part="U$22" gate="G$1" pin="13"/>
+<wire x1="104.14" y1="-17.78" x2="109.22" y2="-17.78" width="0.1524" layer="91"/>
+<label x="109.22" y="-17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D10" class="0">
@@ -1759,9 +1741,9 @@ USB</text>
 <label x="124.46" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-15.24" x2="104.14" y2="-15.24" width="0.1524" layer="91"/>
-<label x="109.22" y="-15.24" size="1.778" layer="95"/>
 <pinref part="U$22" gate="G$1" pin="10"/>
+<wire x1="109.22" y1="-10.16" x2="104.14" y2="-10.16" width="0.1524" layer="91"/>
+<label x="109.22" y="-10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D12" class="0">
@@ -1771,9 +1753,9 @@ USB</text>
 <label x="124.46" y="15.24" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-20.32" x2="104.14" y2="-20.32" width="0.1524" layer="91"/>
-<label x="109.22" y="-20.32" size="1.778" layer="95"/>
 <pinref part="U$22" gate="G$1" pin="12"/>
+<wire x1="109.22" y1="-15.24" x2="104.14" y2="-15.24" width="0.1524" layer="91"/>
+<label x="109.22" y="-15.24" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D6" class="0">
@@ -1795,14 +1777,14 @@ USB</text>
 <label x="124.46" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="109.22" y1="-7.62" x2="104.14" y2="-7.62" width="0.1524" layer="91"/>
-<label x="109.22" y="-7.62" size="1.778" layer="95"/>
-<pinref part="U$22" gate="G$1" pin="7"/>
-</segment>
-<segment>
 <pinref part="U$41" gate="G$1" pin="ATN"/>
 <wire x1="187.96" y1="-58.42" x2="175.26" y2="-58.42" width="0.1524" layer="91"/>
 <label x="175.26" y="-58.42" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$21" gate="G$1" pin="D7"/>
+<wire x1="53.34" y1="-5.08" x2="58.42" y2="-5.08" width="0.1524" layer="91"/>
+<label x="58.42" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -1877,9 +1859,9 @@ USB</text>
 <label x="124.46" y="43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$17" gate="G$1" pin="HOLE"/>
-<wire x1="134.62" y1="-12.7" x2="147.32" y2="-12.7" width="0.1524" layer="91"/>
-<label x="147.32" y="-12.7" size="1.778" layer="95"/>
+<pinref part="U$22" gate="G$1" pin="RX"/>
+<wire x1="109.22" y1="-20.32" x2="104.14" y2="-20.32" width="0.1524" layer="91"/>
+<label x="109.22" y="-20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWD-06(RESET)" class="0">
@@ -1976,9 +1958,9 @@ USB</text>
 <label x="124.46" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$16" gate="G$1" pin="HOLE"/>
-<wire x1="134.62" y1="-7.62" x2="147.32" y2="-7.62" width="0.1524" layer="91"/>
-<label x="147.32" y="-7.62" size="1.778" layer="95"/>
+<pinref part="U$22" gate="G$1" pin="TX"/>
+<wire x1="104.14" y1="-22.86" x2="109.22" y2="-22.86" width="0.1524" layer="91"/>
+<label x="109.22" y="-22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">

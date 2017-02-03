@@ -2087,7 +2087,6 @@ USB</text>
 <pinref part="U$5" gate="G$1" pin="SW"/>
 <pinref part="U$13" gate="G$1" pin="P$1"/>
 <wire x1="-45.72" y1="-45.72" x2="-40.64" y2="-45.72" width="0.1524" layer="91"/>
-<wire x1="-38.1" y1="-45.72" x2="-40.64" y2="-45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="REG-VIN" class="0">

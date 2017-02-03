@@ -796,6 +796,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="10118194-0001LF:MICRO-USB">
+<description>Micro USB Connector</description>
 <gates>
 <gate name="G$1" symbol="10118194-0001LF:MICRO-USB" x="-7.62" y="5.08"/>
 </gates>
@@ -809,7 +810,10 @@ USB</text>
 <connect gate="G$1" pin="ID" pad="4:ID"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DESCRIPTION" value="CONN USB MICRO B RECPT SMT R/A "/>
+<attribute name="DIGIKEY" value="609-4618-1-ND"/>
+</technology>
 </technologies>
 </device>
 </devices>

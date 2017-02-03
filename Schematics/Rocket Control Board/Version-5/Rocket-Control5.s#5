@@ -243,9 +243,9 @@
 <text x="-1.27" y="0" size="0.8128" layer="21" rot="R90" align="center">ATN</text>
 <text x="-1.27" y="2.54" size="0.8128" layer="21" rot="R90" align="center">SCK</text>
 <text x="-1.27" y="5.08" size="0.8128" layer="21" rot="R90" align="center">MISO</text>
-<text x="3.81" y="5.08" size="0.8128" layer="21" rot="R270" align="center">3V3</text>
-<text x="3.81" y="2.54" size="0.8128" layer="21" rot="R90" align="center">MOSI</text>
-<text x="3.81" y="0" size="0.8128" layer="21" rot="R90" align="center">GND</text>
+<text x="1.27" y="5.08" size="0.8128" layer="21" rot="R270" align="center">3V3</text>
+<text x="1.27" y="2.54" size="0.8128" layer="21" rot="R90" align="center">MOSI</text>
+<text x="1.27" y="0" size="0.8128" layer="21" rot="R90" align="center">GND</text>
 </package>
 <package name="HEADER-SIDE-A">
 <pad name="A5" x="0" y="0" drill="1"/>
@@ -262,22 +262,22 @@
 <pad name="D5" x="0" y="15.24" drill="1"/>
 <pad name="D6" x="0" y="17.78" drill="1"/>
 <pad name="AREF" x="0" y="-15.24" drill="1"/>
-<text x="-1.905" y="-15.24" size="0.8128" layer="21" rot="R90" align="center">AREF</text>
-<text x="-1.905" y="-12.7" size="0.8128" layer="21" rot="R90" align="center">A0</text>
-<text x="-1.905" y="-10.16" size="0.8128" layer="21" rot="R90" align="center">A1</text>
-<text x="-1.905" y="-7.62" size="0.8128" layer="21" rot="R90" align="center">A2</text>
-<text x="-1.905" y="-5.08" size="0.8128" layer="21" rot="R90" align="center">A3</text>
-<text x="-1.905" y="-2.54" size="0.8128" layer="21" rot="R90" align="center">A4</text>
-<text x="-1.905" y="0" size="0.8128" layer="21" rot="R90" align="center">A5</text>
-<text x="-1.905" y="2.54" size="0.8128" layer="21" rot="R90" align="center">0</text>
-<text x="-1.905" y="5.08" size="0.8128" layer="21" rot="R90" align="center">1</text>
-<text x="-1.905" y="7.62" size="0.8128" layer="21" rot="R90" align="center">2</text>
-<text x="-1.905" y="10.16" size="0.8128" layer="21" rot="R90" align="center">3</text>
-<text x="-1.905" y="12.7" size="0.8128" layer="21" rot="R90" align="center">4</text>
-<text x="-1.905" y="15.24" size="0.8128" layer="21" rot="R90" align="center">5</text>
-<text x="-1.905" y="17.78" size="0.8128" layer="21" rot="R90" align="center">6</text>
+<text x="-1.27" y="-15.24" size="0.8128" layer="21" rot="R90" align="center">AREF</text>
+<text x="-1.27" y="-12.7" size="0.8128" layer="21" rot="R90" align="center">A0</text>
+<text x="-1.27" y="-10.16" size="0.8128" layer="21" rot="R90" align="center">A1</text>
+<text x="-1.27" y="-7.62" size="0.8128" layer="21" rot="R90" align="center">A2</text>
+<text x="-1.27" y="-5.08" size="0.8128" layer="21" rot="R90" align="center">A3</text>
+<text x="-1.27" y="-2.54" size="0.8128" layer="21" rot="R90" align="center">A4</text>
+<text x="-1.27" y="0" size="0.8128" layer="21" rot="R90" align="center">A5</text>
+<text x="-1.27" y="2.54" size="0.8128" layer="21" rot="R90" align="center">0</text>
+<text x="-1.27" y="5.08" size="0.8128" layer="21" rot="R90" align="center">1</text>
+<text x="-1.27" y="7.62" size="0.8128" layer="21" rot="R90" align="center">2</text>
+<text x="-1.27" y="10.16" size="0.8128" layer="21" rot="R90" align="center">3</text>
+<text x="-1.27" y="12.7" size="0.8128" layer="21" rot="R90" align="center">4</text>
+<text x="-1.27" y="15.24" size="0.8128" layer="21" rot="R90" align="center">5</text>
+<text x="-1.27" y="17.78" size="0.8128" layer="21" rot="R90" align="center">6</text>
 <pad name="D7" x="0" y="20.32" drill="1"/>
-<text x="-1.905" y="20.32" size="0.8128" layer="21" rot="R90" align="center">7</text>
+<text x="-1.27" y="20.32" size="0.8128" layer="21" rot="R90" align="center">7</text>
 </package>
 <package name="HEADER-SIDE-B">
 <pad name="D8" x="-38.1" y="0" drill="1"/>
@@ -293,24 +293,24 @@
 <pad name="VIN" x="-7.62" y="0" drill="1"/>
 <pad name="GND-IN" x="-5.08" y="0" drill="1"/>
 <pad name="USB" x="-2.54" y="0" drill="1"/>
-<text x="-7.62" y="-1.905" size="0.8128" layer="21" align="center">VIN</text>
-<text x="-5.08" y="-1.905" size="0.8128" layer="21" align="center">GND</text>
-<text x="-2.54" y="-1.905" size="0.8128" layer="21" align="center">USB</text>
-<text x="-10.16" y="-1.905" size="0.8128" layer="21" align="center">GND</text>
-<text x="-12.7" y="-1.905" size="0.8128" layer="21" align="center">3V3</text>
-<text x="-17.78" y="-1.905" size="0.8128" layer="21" align="center">SCL</text>
-<text x="-15.24" y="-1.905" size="0.8128" layer="21" align="center">SDA</text>
-<text x="-25.4" y="-1.905" size="0.8128" layer="21" align="center">13</text>
-<text x="-27.94" y="-1.905" size="0.8128" layer="21" align="center">12</text>
-<text x="-30.48" y="-1.905" size="0.8128" layer="21" align="center">11</text>
-<text x="-33.02" y="-1.905" size="0.8128" layer="21" align="center">10</text>
-<text x="-35.56" y="-1.905" size="0.8128" layer="21" align="center">9</text>
-<text x="-38.1" y="-1.905" size="0.8128" layer="21" align="center">8</text>
+<text x="-7.62" y="-1.27" size="0.8128" layer="21" align="center">VIN</text>
+<text x="-5.08" y="-1.27" size="0.8128" layer="21" align="center">GND</text>
+<text x="-2.54" y="-1.27" size="0.8128" layer="21" align="center">USB</text>
+<text x="-10.16" y="-1.27" size="0.8128" layer="21" align="center">GND</text>
+<text x="-12.7" y="-1.27" size="0.8128" layer="21" align="center">3V3</text>
+<text x="-17.78" y="-1.27" size="0.8128" layer="21" align="center">SCL</text>
+<text x="-15.24" y="-1.27" size="0.8128" layer="21" align="center">SDA</text>
+<text x="-25.4" y="-1.27" size="0.8128" layer="21" align="center">13</text>
+<text x="-27.94" y="-1.27" size="0.8128" layer="21" align="center">12</text>
+<text x="-30.48" y="-1.27" size="0.8128" layer="21" align="center">11</text>
+<text x="-33.02" y="-1.27" size="0.8128" layer="21" align="center">10</text>
+<text x="-35.56" y="-1.27" size="0.8128" layer="21" align="center">9</text>
+<text x="-38.1" y="-1.27" size="0.8128" layer="21" align="center">8</text>
 <rectangle x1="-2.86" y1="-0.32" x2="-2.22" y2="0.32" layer="22"/>
 <pad name="RX" x="-22.86" y="0" drill="1"/>
 <pad name="TX" x="-20.32" y="0" drill="1"/>
-<text x="-22.86" y="-1.905" size="0.8128" layer="21" align="center">RX</text>
-<text x="-20.32" y="-1.905" size="0.8128" layer="21" align="center">TX</text>
+<text x="-22.86" y="-1.27" size="0.8128" layer="21" align="center">RX</text>
+<text x="-20.32" y="-1.27" size="0.8128" layer="21" align="center">TX</text>
 </package>
 <package name="8-WFDFN-EXPOSED-PAD">
 <smd name="PGND" x="0" y="0" dx="0.5" dy="0.28" layer="1" rot="R90"/>
