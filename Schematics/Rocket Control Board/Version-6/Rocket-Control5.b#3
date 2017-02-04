@@ -582,7 +582,12 @@ design rules under a new name.</description>
 <attribute name="MF" value="Amphenol FCI" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="10118194-0001LF" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="JTAG-CONNECTOR" library="RocketControlBoard" package="JTAG-MINI" value="JTAG-MINI" x="10.3124" y="0.7112" rot="R90"/>
+<element name="JTAG-CONNECTOR" library="RocketControlBoard" package="JTAG-MINI" value="JTAG-MINI" x="10.3124" y="0.7112" rot="R90">
+<attribute name="DESC" value="CONN HEADER 10POS UNSHD VERT T/H" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY" value="609-3712-ND" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="Amphenol FCI" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="20021111-00010T4LF" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="SPI-PORT" library="RocketControlBoard" package="SPI-PORT" value="SPI-PORT" x="13.97" y="26.67"/>
 <element name="HEADER-SIDE-A" library="RocketControlBoard" package="HEADER-SIDE-A" value="HEADER-SIDE-A" x="19.05" y="16.51"/>
 <element name="HEADER-SIDE-B" library="RocketControlBoard" package="HEADER-SIDE-B" value="HEADER-SIDE-B" x="1.27" y="39.37" rot="R90"/>
@@ -609,12 +614,6 @@ design rules under a new name.</description>
 <attribute name="DIGIKEY" value="445-3606-1-ND" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MF" value="TDK Corporation" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="GLFR1608T2R2M-LR" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-</element>
-<element name="REGULATOR-OUT-RESISTOR" library="RocketControlBoard" package="C0402" value="100k" x="8.9408" y="25.2984" rot="R270">
-<attribute name="DESC" value="RES SMD 100K OHM 5% 1/10W 0603" x="8.9408" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="311-100KGRCT-ND" x="8.9408" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Yageo" x="8.9408" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="RC0603JR-07100KL" x="8.9408" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="DIODE-USB" library="RocketControlBoard" package="SOD-882" value="CTS05S40,L3F" x="6.9088" y="31.9024" rot="R270">
 <attribute name="DESC" value="DIODE SCHOTTKY 40V 500MA CST2" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
@@ -735,7 +734,7 @@ design rules under a new name.</description>
 <vertex x="-0.9652" y="27.5082"/>
 <vertex x="3.6068" y="27.5336"/>
 <vertex x="3.6322" y="26.7208"/>
-<vertex x="9.7536" y="26.7462"/>
+<vertex x="9.0678" y="26.8478"/>
 <vertex x="9.0678" y="27.813"/>
 <vertex x="9.0424" y="34.0106"/>
 <vertex x="11.2268" y="34.036"/>
@@ -840,13 +839,12 @@ design rules under a new name.</description>
 <vertex x="11.6078" y="33.6296"/>
 <vertex x="9.4488" y="33.6042"/>
 <vertex x="9.5504" y="27.7368"/>
-<vertex x="10.4648" y="26.3652"/>
+<vertex x="9.6266" y="26.3906"/>
 <vertex x="2.9464" y="26.3144"/>
 <vertex x="2.9718" y="27.0764"/>
 <vertex x="-0.9144" y="27.051"/>
 </polygon>
 <contactref element="REGULATOR-OUT-INDUCTOR" pad="2"/>
-<contactref element="REGULATOR-OUT-RESISTOR" pad="2"/>
 <contactref element="REGULATOR-3.3V" pad="VOS"/>
 <contactref element="REGULATOR-OUT-CAPACITOR" pad="2"/>
 <wire x1="6.3914" y1="28.1736" x2="6.3914" y2="27.8036" width="0.1524" layer="1"/>
@@ -1115,26 +1113,22 @@ design rules under a new name.</description>
 <signal name="USB-N">
 <contactref element="ARM-CORTEX-MO+" pad="33"/>
 <contactref element="MICRO-USB-CONNECTOR" pad="2:D-"/>
-<wire x1="10.3632" y1="23.7744" x2="10.3632" y2="26.9748" width="0.1524" layer="1"/>
-<wire x1="10.3632" y1="26.9748" x2="9.3114" y2="28.0266" width="0.1524" layer="1"/>
-<wire x1="9.3114" y1="28.0266" x2="9.3114" y2="34.0284" width="0.1524" layer="1"/>
-<wire x1="10.3632" y1="23.7744" x2="9.5758" y2="22.987" width="0.1524" layer="1"/>
 <wire x1="6.9059125" y1="18.63131875" x2="5.7404" y2="19.79683125" width="0.1524" layer="1"/>
 <wire x1="5.7404" y1="19.79683125" x2="5.7404" y2="22.5298" width="0.1524" layer="1"/>
 <wire x1="5.7404" y1="22.5298" x2="6.1976" y2="22.987" width="0.1524" layer="1"/>
-<wire x1="6.1976" y1="22.987" x2="9.5758" y2="22.987" width="0.1524" layer="1"/>
+<wire x1="6.1976" y1="22.987" x2="7.6708" y2="22.987" width="0.1524" layer="1"/>
+<wire x1="7.6708" y1="22.987" x2="9.3114" y2="24.6276" width="0.1524" layer="1"/>
+<wire x1="9.3114" y1="24.6276" x2="9.3114" y2="34.0284" width="0.1524" layer="1"/>
 </signal>
 <signal name="USB-P">
 <contactref element="ARM-CORTEX-MO+" pad="34"/>
 <contactref element="MICRO-USB-CONNECTOR" pad="3:D+"/>
-<wire x1="8.6614" y1="34.0284" x2="8.6614" y2="28.1432" width="0.1524" layer="1"/>
-<wire x1="8.6614" y1="28.1432" x2="9.9314" y2="26.8732" width="0.1524" layer="1"/>
-<wire x1="9.9314" y1="26.8732" x2="9.9314" y2="23.9014" width="0.1524" layer="1"/>
-<wire x1="9.3726" y1="23.3426" x2="9.9314" y2="23.9014" width="0.1524" layer="1"/>
 <wire x1="6.55235625" y1="18.277765625" x2="5.3594" y2="19.470721875" width="0.1524" layer="1"/>
 <wire x1="5.3594" y1="19.470721875" x2="5.3594" y2="22.7076" width="0.1524" layer="1"/>
-<wire x1="9.3726" y1="23.3426" x2="5.9944" y2="23.3426" width="0.1524" layer="1"/>
 <wire x1="5.9944" y1="23.3426" x2="5.3594" y2="22.7076" width="0.1524" layer="1"/>
+<wire x1="8.6614" y1="34.0284" x2="8.6614" y2="24.5364" width="0.1524" layer="1"/>
+<wire x1="8.6614" y1="24.5364" x2="7.4676" y2="23.3426" width="0.1524" layer="1"/>
+<wire x1="7.4676" y1="23.3426" x2="5.9944" y2="23.3426" width="0.1524" layer="1"/>
 </signal>
 <signal name="USB">
 <contactref element="MICRO-USB-CONNECTOR" pad="1:VBUS"/>
@@ -1213,12 +1207,6 @@ design rules under a new name.</description>
 <wire x1="1.27" y1="18.3642" x2="4.1848625" y2="15.4493375" width="0.1524" layer="1"/>
 <wire x1="4.1848625" y1="15.4493375" x2="5.84525" y2="15.4493375" width="0.1524" layer="1"/>
 </signal>
-<signal name="N$3">
-<contactref element="REGULATOR-3.3V" pad="PG"/>
-<wire x1="7.3914" y1="28.1736" x2="7.3914" y2="27.6978" width="0.1524" layer="1"/>
-<contactref element="REGULATOR-OUT-RESISTOR" pad="1"/>
-<wire x1="7.3914" y1="27.6978" x2="8.9408" y2="25.9484" width="0.1524" layer="1"/>
-</signal>
 <signal name="N$1">
 <contactref element="REGULATOR-3.3V" pad="SW"/>
 <contactref element="REGULATOR-OUT-INDUCTOR" pad="1"/>
@@ -1252,17 +1240,13 @@ design rules under a new name.</description>
 <wire x1="8.108740625" y1="14.8844" x2="8.7376" y2="14.8844" width="0.1524" layer="1"/>
 <wire x1="8.7376" y1="14.8844" x2="11.9634" y2="18.1102" width="0.1524" layer="1"/>
 <wire x1="11.9634" y1="18.1102" x2="11.9634" y2="19.7866" width="0.1524" layer="1"/>
-<wire x1="10.795" y1="23.6982" x2="10.795" y2="27.1272" width="0.1524" layer="1"/>
-<wire x1="10.795" y1="27.1272" x2="10.0076" y2="27.9146" width="0.1524" layer="1"/>
-<wire x1="10.795" y1="23.6982" x2="10.5156" y2="23.4188" width="0.1524" layer="1"/>
-<wire x1="10.5156" y1="23.4188" x2="10.5156" y2="21.2344" width="0.1524" layer="1"/>
-<wire x1="10.5156" y1="21.2344" x2="11.9634" y2="19.7866" width="0.1524" layer="1"/>
-<wire x1="10.0076" y1="27.9146" x2="10.0076" y2="30.1752" width="0.1524" layer="1"/>
+<wire x1="10.0076" y1="21.7424" x2="11.9634" y2="19.7866" width="0.1524" layer="1"/>
 <via x="10.0076" y="30.1752" extent="1-16" drill="0.3302"/>
 <wire x1="8.0114" y1="32.7002" x2="8.0114" y2="34.0284" width="0.1524" layer="1"/>
 <via x="8.0114" y="32.7002" extent="1-16" drill="0.3302"/>
 <wire x1="8.0114" y1="32.7002" x2="10.0076" y2="30.704" width="0.1524" layer="16"/>
 <wire x1="10.0076" y1="30.704" x2="10.0076" y2="30.1752" width="0.1524" layer="16"/>
+<wire x1="10.0076" y1="30.1752" x2="10.0076" y2="21.7424" width="0.1524" layer="1"/>
 </signal>
 </signals>
 </board>

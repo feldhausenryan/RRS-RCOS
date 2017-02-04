@@ -455,7 +455,7 @@ ARM Cortex M0+</text>
 <text x="12.7" y="-5.08" size="1.27" layer="94" align="center">MICRO
 USB</text>
 </symbol>
-<symbol name="CRYSTAL">
+<symbol name="ABS25-32.768KHZ-6-T">
 <pin name="A" x="-7.62" y="0" visible="off" length="middle"/>
 <pin name="B" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
 <wire x1="-1.016" y1="2.54" x2="-1.016" y2="-2.54" width="0.254" layer="94"/>
@@ -829,9 +829,9 @@ USB</text>
 </device>
 </devices>
 </deviceset>
-<deviceset name="CRYSTAL">
+<deviceset name="ABS25-32.768KHZ-6-T">
 <gates>
-<gate name="G$1" symbol="CRYSTAL" x="0" y="0"/>
+<gate name="G$1" symbol="ABS25-32.768KHZ-6-T" x="0" y="0"/>
 </gates>
 <devices>
 <device name="" package="4-SOJ:CRYSTAL">

@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -704,6 +704,7 @@ USB</text>
 </symbols>
 <devicesets>
 <deviceset name="ATSAML21G18B-AUT">
+<description>ARM Cortex M0+ Microcontroller</description>
 <gates>
 <gate name="G$1" symbol="ATSAML21G18B-AUT" x="-38.1" y="30.48"/>
 </gates>
@@ -766,6 +767,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="10118194-0001LF">
+<description>Micro USB Port</description>
 <gates>
 <gate name="G$1" symbol="10118194-0001LF" x="-7.62" y="5.08"/>
 </gates>
@@ -785,6 +787,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="ABS25-32.768KHZ-6-T">
+<description>Oscillating crystal</description>
 <gates>
 <gate name="G$1" symbol="ABS25-32.768KHZ-6-T" x="0" y="0"/>
 </gates>
@@ -801,6 +804,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="HEADER-HOLE">
+<description>Single 2.54mm sized header hole</description>
 <gates>
 <gate name="G$1" symbol="HEADER-HOLE" x="-2.54" y="0"/>
 </gates>
@@ -816,6 +820,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="BLM18PG471SN1D">
+<description>Ferrite Bead</description>
 <gates>
 <gate name="G$1" symbol="BLM18PG471SN1D" x="0" y="0"/>
 </gates>
@@ -832,6 +837,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="JTAG-MINI">
+<description>JTAG/SWD Connector (Programming Port)</description>
 <gates>
 <gate name="G$1" symbol="JTAG-MINI" x="0" y="5.08"/>
 </gates>
@@ -856,6 +862,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="SPI-PORT">
+<description>3x2 2.54mm sized SPI port</description>
 <gates>
 <gate name="G$1" symbol="SPI-PORT" x="-10.16" y="2.54"/>
 </gates>
@@ -876,6 +883,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="HEADER-SIDE-A">
+<description>2.54mm header strip</description>
 <gates>
 <gate name="G$1" symbol="HEADER-SIDE-A" x="-2.54" y="17.78"/>
 </gates>
@@ -905,6 +913,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="HEADER-SIDE-B">
+<description>2.54mm header strip</description>
 <gates>
 <gate name="G$1" symbol="HEADER-SIDE-B" x="-12.7" y="15.24"/>
 </gates>
@@ -934,6 +943,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="TPS62172DSGR">
+<description>3.3V Switching voltage regulator</description>
 <gates>
 <gate name="G$1" symbol="TPS62172DSGR" x="0" y="0"/>
 </gates>
@@ -957,6 +967,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="CAPACITOR">
+<description>SMD Capacitor</description>
 <gates>
 <gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
@@ -982,6 +993,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="RESISTOR">
+<description>SMD Resistor</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
@@ -1007,6 +1019,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="INDUCTOR">
+<description>SMD inductor</description>
 <gates>
 <gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
 </gates>
@@ -1023,6 +1036,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="CTS05S40,L3F">
+<description>Diode</description>
 <gates>
 <gate name="G$1" symbol="CTS05S40,L3F" x="0" y="0"/>
 </gates>
@@ -1039,6 +1053,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="XBEE">
+<description>XBee SMD Chip</description>
 <gates>
 <gate name="G$1" symbol="XBEE" x="-17.78" y="10.16"/>
 </gates>
@@ -1091,6 +1106,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="APTD1608ZGC">
+<description>Diode</description>
 <gates>
 <gate name="G$1" symbol="APTD1608ZGC" x="0" y="0"/>
 </gates>

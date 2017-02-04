@@ -609,6 +609,7 @@ USB</text>
 </symbols>
 <devicesets>
 <deviceset name="ATSAML21G18B-AUT">
+<description>ARM Cortex M0+ Microcontroller</description>
 <gates>
 <gate name="G$1" symbol="ATSAML21G18B-AUT" x="-38.1" y="30.48"/>
 </gates>
@@ -671,6 +672,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="ABS25-32.768KHZ-6-T">
+<description>Oscillating crystal</description>
 <gates>
 <gate name="G$1" symbol="ABS25-32.768KHZ-6-T" x="0" y="0"/>
 </gates>
@@ -687,6 +689,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="BLM18PG471SN1D">
+<description>Ferrite Bead</description>
 <gates>
 <gate name="G$1" symbol="BLM18PG471SN1D" x="0" y="0"/>
 </gates>
@@ -703,6 +706,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="10118194-0001LF">
+<description>Micro USB Port</description>
 <gates>
 <gate name="G$1" symbol="10118194-0001LF" x="-7.62" y="5.08"/>
 </gates>
@@ -722,6 +726,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="JTAG-MINI">
+<description>JTAG/SWD Connector (Programming Port)</description>
 <gates>
 <gate name="G$1" symbol="JTAG-MINI" x="0" y="5.08"/>
 </gates>
@@ -746,6 +751,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="SPI-PORT">
+<description>3x2 2.54mm sized SPI port</description>
 <gates>
 <gate name="G$1" symbol="SPI-PORT" x="-10.16" y="2.54"/>
 </gates>
@@ -766,6 +772,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="HEADER-SIDE-A">
+<description>2.54mm header strip</description>
 <gates>
 <gate name="G$1" symbol="HEADER-SIDE-A" x="-2.54" y="17.78"/>
 </gates>
@@ -795,6 +802,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="HEADER-SIDE-B">
+<description>2.54mm header strip</description>
 <gates>
 <gate name="G$1" symbol="HEADER-SIDE-B" x="-12.7" y="15.24"/>
 </gates>
@@ -824,6 +832,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="TPS62172DSGR">
+<description>3.3V Switching voltage regulator</description>
 <gates>
 <gate name="G$1" symbol="TPS62172DSGR" x="0" y="0"/>
 </gates>
@@ -847,6 +856,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="CAPACITOR">
+<description>SMD Capacitor</description>
 <gates>
 <gate name="G$1" symbol="CAPACITOR" x="0" y="0"/>
 </gates>
@@ -872,6 +882,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="INDUCTOR">
+<description>SMD inductor</description>
 <gates>
 <gate name="G$1" symbol="INDUCTOR" x="0" y="0"/>
 </gates>
@@ -888,6 +899,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="RESISTOR">
+<description>SMD Resistor</description>
 <gates>
 <gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
 </gates>
@@ -913,6 +925,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="CTS05S40,L3F">
+<description>Diode</description>
 <gates>
 <gate name="G$1" symbol="CTS05S40,L3F" x="0" y="0"/>
 </gates>
@@ -929,6 +942,7 @@ USB</text>
 </devices>
 </deviceset>
 <deviceset name="APTD1608ZGC">
+<description>Diode</description>
 <gates>
 <gate name="G$1" symbol="APTD1608ZGC" x="0" y="0"/>
 </gates>
@@ -1008,61 +1022,185 @@ USB</text>
 </class>
 </classes>
 <parts>
-<part name="ARM-CORTEX-MO+" library="RocketControlBoard" deviceset="ATSAML21G18B-AUT" device=""/>
-<part name="CRYSTAL-CAP-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="6.8pF"/>
-<part name="CRYSTAL-CAP-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="6.8pF"/>
+<part name="ARM-CORTEX-MO+" library="RocketControlBoard" deviceset="ATSAML21G18B-AUT" device="">
+<attribute name="DESC" value="IC MCU 32BIT 256KB FLASH 48TQFP"/>
+<attribute name="DIGIKEY#" value="ATSAML21G18B-AUTCT-ND"/>
+<attribute name="MANF" value="Microchip Technology"/>
+<attribute name="MANF#" value="ATSAML21G18B-AUT"/>
+</part>
+<part name="CRYSTAL-CAP-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="6.8pF">
+<attribute name="DESC" value="CAP CER 6.8PF 50V NP0 0603"/>
+<attribute name="DIGIKEY#" value="1276-2332-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL10C6R8BB8NNNC"/>
+</part>
+<part name="CRYSTAL-CAP-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="6.8pF">
+<attribute name="DESC" value="CAP CER 6.8PF 50V NP0 0603"/>
+<attribute name="DIGIKEY#" value="1276-2332-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL10C6R8BB8NNNC"/>
+</part>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="OSC-CRYSTAL" library="RocketControlBoard" deviceset="ABS25-32.768KHZ-6-T" device=""/>
+<part name="OSC-CRYSTAL" library="RocketControlBoard" deviceset="ABS25-32.768KHZ-6-T" device="">
+<attribute name="DESC" value="CRYSTAL 32.7680KHZ 6PF SMD"/>
+<attribute name="DIGIKEY#" value="535-10240-1-ND"/>
+<attribute name="MANF" value="Abracon LLC"/>
+<attribute name="MANF#" value="ABS25-32.768KHZ-6-T"/>
+</part>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="FERRITE-BEAD" library="RocketControlBoard" deviceset="BLM18PG471SN1D" device=""/>
+<part name="FERRITE-BEAD" library="RocketControlBoard" deviceset="BLM18PG471SN1D" device="">
+<attribute name="DESC" value="FERRITE BEAD 470 OHM 0603 1LN"/>
+<attribute name="DIGIKEY#" value="490-5223-1-ND"/>
+<attribute name="MANF" value="Murata Electronics North America"/>
+<attribute name="MANF#" value="BLM18PG471SN1D"/>
+</part>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="+3V1" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND4" library="supply1" deviceset="GND" device=""/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
-<part name="VDDIO-2" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="0.1uF"/>
+<part name="VDDIO-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A104KP5NNNC"/>
+</part>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
-<part name="VDDIO-1" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="0.1uF"/>
+<part name="VDDIO-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A104KP5NNNC"/>
+</part>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="+3V3" library="supply1" deviceset="+3V3" device=""/>
-<part name="MICRO-USB-CONNECTOR" library="RocketControlBoard" deviceset="10118194-0001LF" device=""/>
+<part name="MICRO-USB-CONNECTOR" library="RocketControlBoard" deviceset="10118194-0001LF" device="">
+<attribute name="DESC" value="CONN USB MICRO B RECPT SMT R/A"/>
+<attribute name="DIGIKEY#" value="609-4618-1-ND"/>
+<attribute name="MANF" value="Amphenol FCI"/>
+<attribute name="MANF#" value="10118194-0001LF"/>
+</part>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V6" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
-<part name="JTAG-CONNECTOR" library="RocketControlBoard" deviceset="JTAG-MINI" device=""/>
+<part name="JTAG-CONNECTOR" library="RocketControlBoard" deviceset="JTAG-MINI" device="">
+<attribute name="DESC" value="CONN HEADER 10POS UNSHD VERT T/H"/>
+<attribute name="DIGIKEY#" value="609-3712-ND"/>
+<attribute name="MANF" value="Amphenol FCI"/>
+<attribute name="MANF#" value="20021111-00010T4LF"/>
+</part>
 <part name="SPI-PORT" library="RocketControlBoard" deviceset="SPI-PORT" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
 <part name="HEADER-SIDE-A" library="RocketControlBoard" deviceset="HEADER-SIDE-A" device=""/>
 <part name="HEADER-SIDE-B" library="RocketControlBoard" deviceset="HEADER-SIDE-B" device=""/>
-<part name="REGULATOR-3.3V" library="RocketControlBoard" deviceset="TPS62172DSGR" device=""/>
-<part name="REGULATOR-IN-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="10uF"/>
-<part name="REGULATOR-OUT-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="22uF"/>
-<part name="REGULATOR-OUT-INDUCTOR" library="RocketControlBoard" deviceset="INDUCTOR" device="" value="2.2uH"/>
-<part name="REGULATOR-OUT-RESISTOR" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="100k"/>
+<part name="REGULATOR-3.3V" library="RocketControlBoard" deviceset="TPS62172DSGR" device="">
+<attribute name="DESC" value="IC REG BUCK 3.3V 0.5A SYNC 8WSON"/>
+<attribute name="DIGIKEY#" value="296-39449-1-ND"/>
+<attribute name="MANF" value="Texas Instruments"/>
+<attribute name="MANF#" value="TPS62172DSGR"/>
+</part>
+<part name="REGULATOR-IN-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="10uF">
+<attribute name="DESC" value="CAP CER 10UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1450-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A106MP5NUNC"/>
+</part>
+<part name="REGULATOR-OUT-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="22uF">
+<attribute name="DESC" value="CAP CER 22UF 6.3V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-6834-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A226MQ5QUNC"/>
+</part>
+<part name="REGULATOR-OUT-INDUCTOR" library="RocketControlBoard" deviceset="INDUCTOR" device="" value="2.2uH">
+<attribute name="DESC" value="FIXED IND 2.2UH 600MA 170 MOHM"/>
+<attribute name="DIGIKEY#" value="445-3606-1-ND"/>
+<attribute name="MANF" value="TDK Corporation"/>
+<attribute name="MANF#" value="GLFR1608T2R2M-LR"/>
+</part>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
-<part name="DIODE-USB" library="RocketControlBoard" deviceset="CTS05S40,L3F" device=""/>
+<part name="DIODE-USB" library="RocketControlBoard" deviceset="CTS05S40,L3F" device="">
+<attribute name="DESC" value="DIODE SCHOTTKY 40V 500MA CST2"/>
+<attribute name="DIGIKEY#" value="CTS05S40L3FCT-ND"/>
+<attribute name="MANF" value="Toshiba Semiconductor and Storage"/>
+<attribute name="MANF#" value="CTS05S40,L3F"/>
+</part>
 <part name="+3V4" library="supply1" deviceset="+3V3" device=""/>
 <part name="+3V5" library="supply1" deviceset="+3V3" device=""/>
-<part name="DIODE-VIN" library="RocketControlBoard" deviceset="CTS05S40,L3F" device=""/>
-<part name="POWER-LED" library="RocketControlBoard" deviceset="APTD1608ZGC" device=""/>
+<part name="DIODE-VIN" library="RocketControlBoard" deviceset="CTS05S40,L3F" device="">
+<attribute name="DESC" value="DIODE SCHOTTKY 40V 500MA CST2"/>
+<attribute name="DIGIKEY#" value="CTS05S40L3FCT-ND"/>
+<attribute name="MANF" value="Toshiba Semiconductor and Storage"/>
+<attribute name="MANF#" value="CTS05S40,L3F"/>
+</part>
+<part name="POWER-LED" library="RocketControlBoard" deviceset="APTD1608ZGC" device="">
+<attribute name="DESC" value="LED GREEN CLEAR 0603 SMD"/>
+<attribute name="DIGIKEY#" value="754-1547-1-ND"/>
+<attribute name="MANF" value="Kingbright"/>
+<attribute name="MANF#" value="APTD1608ZGC"/>
+</part>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="LED-RESISTOR" library="RocketControlBoard" deviceset="RESISTOR" device="C0603" value="330"/>
+<part name="LED-RESISTOR" library="RocketControlBoard" deviceset="RESISTOR" device="C0603" value="330">
+<attribute name="DESC" value="RES SMD 330 OHM 5% 1/10W 0603 "/>
+<attribute name="DIGIKEY#" value="1276-5050-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="RC1608J331CS"/>
+</part>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
-<part name="SDA-PULLUP" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="4.7k"/>
-<part name="SCL-PULLUP" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="4.7k"/>
-<part name="VIN-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF"/>
-<part name="VDDCORE-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF"/>
-<part name="AREF-CAPACITOR-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF"/>
-<part name="AREF-CAPACITOR-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="4.7uF"/>
-<part name="ANALOG-CAPACITOR-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF"/>
-<part name="ANALOG-CAPACITOR-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="10uF"/>
+<part name="SDA-PULLUP" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="4.7k">
+<attribute name="DESC" value="RES SMD 4.7K OHM 5% 1/10W 0603"/>
+<attribute name="DIGIKEY#" value="1276-5078-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="RC1608J472CS"/>
+</part>
+<part name="SCL-PULLUP" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="4.7k">
+<attribute name="DESC" value="RES SMD 4.7K OHM 5% 1/10W 0603"/>
+<attribute name="DIGIKEY#" value="1276-5078-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="RC1608J472CS"/>
+</part>
+<part name="VIN-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A104KP5NNNC"/>
+</part>
+<part name="VDDCORE-CAPACITOR" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A104KP5NNNC"/>
+</part>
+<part name="AREF-CAPACITOR-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A104KP5NNNC"/>
+</part>
+<part name="AREF-CAPACITOR-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="4.7uF">
+<attribute name="DESC" value="CAP CER 0.47UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1173-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A474KP5NNNC"/>
+</part>
+<part name="ANALOG-CAPACITOR-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="0.1uF">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A104KP5NNNC"/>
+</part>
+<part name="ANALOG-CAPACITOR-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0402" value="10uF">
+<attribute name="DESC" value="CAP CER 10UF 10V X5R 0402"/>
+<attribute name="DIGIKEY#" value="1276-1450-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL05A106MP5NUNC"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -1070,61 +1208,185 @@ USB</text>
 <plain>
 </plain>
 <instances>
-<instance part="ARM-CORTEX-MO+" gate="G$1" x="38.1" y="68.58"/>
-<instance part="CRYSTAL-CAP-2" gate="G$1" x="2.54" y="83.82"/>
-<instance part="CRYSTAL-CAP-1" gate="G$1" x="2.54" y="73.66"/>
+<instance part="ARM-CORTEX-MO+" gate="G$1" x="38.1" y="68.58">
+<attribute name="DESC" x="38.1" y="68.58" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="38.1" y="68.58" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="38.1" y="68.58" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="38.1" y="68.58" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="CRYSTAL-CAP-2" gate="G$1" x="2.54" y="83.82">
+<attribute name="DESC" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="CRYSTAL-CAP-1" gate="G$1" x="2.54" y="73.66">
+<attribute name="DESC" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND1" gate="1" x="-12.7" y="71.12"/>
-<instance part="OSC-CRYSTAL" gate="G$1" x="15.24" y="78.74" rot="R90"/>
+<instance part="OSC-CRYSTAL" gate="G$1" x="15.24" y="78.74" rot="R90">
+<attribute name="DESC" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MANF" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MANF#" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
 <instance part="GND2" gate="1" x="-12.7" y="58.42"/>
-<instance part="FERRITE-BEAD" gate="G$1" x="2.54" y="35.56"/>
+<instance part="FERRITE-BEAD" gate="G$1" x="2.54" y="35.56">
+<attribute name="DESC" x="2.54" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="35.56" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND3" gate="1" x="-12.7" y="43.18"/>
 <instance part="+3V1" gate="G$1" x="-10.16" y="38.1"/>
 <instance part="GND4" gate="1" x="15.24" y="55.88"/>
 <instance part="GND5" gate="1" x="15.24" y="20.32"/>
-<instance part="VDDIO-2" gate="G$1" x="142.24" y="35.56" rot="MR0"/>
+<instance part="VDDIO-2" gate="G$1" x="142.24" y="35.56" rot="MR0">
+<attribute name="DESC" x="142.24" y="35.56" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="DIGIKEY#" x="142.24" y="35.56" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="MANF" x="142.24" y="35.56" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="MANF#" x="142.24" y="35.56" size="1.778" layer="96" rot="MR0" display="off"/>
+</instance>
 <instance part="GND6" gate="1" x="152.4" y="33.02" rot="MR0"/>
 <instance part="+3V2" gate="G$1" x="132.08" y="43.18" rot="MR0"/>
 <instance part="GND7" gate="1" x="137.16" y="30.48"/>
-<instance part="VDDIO-1" gate="G$1" x="7.62" y="25.4"/>
+<instance part="VDDIO-1" gate="G$1" x="7.62" y="25.4">
+<attribute name="DESC" x="7.62" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="7.62" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="7.62" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="7.62" y="25.4" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND8" gate="1" x="-2.54" y="22.86"/>
 <instance part="+3V3" gate="G$1" x="17.78" y="33.02"/>
-<instance part="MICRO-USB-CONNECTOR" gate="G$1" x="200.66" y="35.56"/>
+<instance part="MICRO-USB-CONNECTOR" gate="G$1" x="200.66" y="35.56">
+<attribute name="DIGIKEY#" x="200.66" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="200.66" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="200.66" y="35.56" size="1.778" layer="96" display="off"/>
+<attribute name="DESC" x="200.66" y="35.56" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND9" gate="1" x="175.26" y="22.86"/>
 <instance part="+3V6" gate="G$1" x="170.18" y="66.04"/>
 <instance part="GND12" gate="1" x="170.18" y="50.8"/>
 <instance part="GND13" gate="1" x="160.02" y="50.8"/>
-<instance part="JTAG-CONNECTOR" gate="G$1" x="195.58" y="63.5"/>
+<instance part="JTAG-CONNECTOR" gate="G$1" x="195.58" y="63.5">
+<attribute name="DESC" x="195.58" y="63.5" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="195.58" y="63.5" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="195.58" y="63.5" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="195.58" y="63.5" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="SPI-PORT" gate="G$1" x="203.2" y="5.08"/>
 <instance part="GND15" gate="1" x="175.26" y="-7.62"/>
 <instance part="+3V7" gate="G$1" x="175.26" y="12.7"/>
 <instance part="HEADER-SIDE-A" gate="G$1" x="144.78" y="-40.64" rot="R180"/>
 <instance part="HEADER-SIDE-B" gate="G$1" x="121.92" y="-40.64" rot="R180"/>
-<instance part="REGULATOR-3.3V" gate="G$1" x="45.72" y="-20.32"/>
-<instance part="REGULATOR-IN-CAPACITOR" gate="G$1" x="10.16" y="-22.86" rot="R90"/>
-<instance part="REGULATOR-OUT-CAPACITOR" gate="G$1" x="78.74" y="-27.94"/>
-<instance part="REGULATOR-OUT-INDUCTOR" gate="G$1" x="78.74" y="-20.32"/>
-<instance part="REGULATOR-OUT-RESISTOR" gate="G$1" x="76.2" y="-12.7"/>
+<instance part="REGULATOR-3.3V" gate="G$1" x="45.72" y="-20.32">
+<attribute name="DESC" x="45.72" y="-20.32" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="45.72" y="-20.32" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="45.72" y="-20.32" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="45.72" y="-20.32" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="REGULATOR-IN-CAPACITOR" gate="G$1" x="10.16" y="-22.86" rot="R90">
+<attribute name="DESC" x="10.16" y="-22.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" x="10.16" y="-22.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MANF" x="10.16" y="-22.86" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="MANF#" x="10.16" y="-22.86" size="1.778" layer="96" rot="R90" display="off"/>
+</instance>
+<instance part="REGULATOR-OUT-CAPACITOR" gate="G$1" x="78.74" y="-27.94">
+<attribute name="DESC" x="78.74" y="-27.94" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="78.74" y="-27.94" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="78.74" y="-27.94" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="78.74" y="-27.94" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="REGULATOR-OUT-INDUCTOR" gate="G$1" x="78.74" y="-20.32">
+<attribute name="DESC" x="78.74" y="-20.32" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="78.74" y="-20.32" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="78.74" y="-20.32" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="78.74" y="-20.32" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND10" gate="1" x="10.16" y="-38.1"/>
-<instance part="GND11" gate="1" x="71.12" y="-33.02"/>
+<instance part="GND11" gate="1" x="71.12" y="-35.56"/>
 <instance part="GND16" gate="1" x="50.8" y="-38.1"/>
-<instance part="DIODE-USB" gate="G$1" x="0" y="0"/>
+<instance part="DIODE-USB" gate="G$1" x="0" y="0">
+<attribute name="DESC" x="0" y="0" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="0" y="0" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="0" y="0" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="0" y="0" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="+3V4" gate="G$1" x="93.98" y="-7.62"/>
 <instance part="+3V5" gate="G$1" x="139.7" y="66.04"/>
-<instance part="DIODE-VIN" gate="G$1" x="0" y="-10.16"/>
-<instance part="POWER-LED" gate="G$1" x="185.42" y="-25.4"/>
+<instance part="DIODE-VIN" gate="G$1" x="0" y="-10.16">
+<attribute name="DESC" x="0" y="-10.16" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="0" y="-10.16" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="0" y="-10.16" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="0" y="-10.16" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="POWER-LED" gate="G$1" x="185.42" y="-25.4">
+<attribute name="DESC" x="185.42" y="-25.4" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="185.42" y="-25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="185.42" y="-25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="185.42" y="-25.4" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="+3V9" gate="G$1" x="175.26" y="-20.32"/>
-<instance part="LED-RESISTOR" gate="G$1" x="203.2" y="-25.4"/>
+<instance part="LED-RESISTOR" gate="G$1" x="203.2" y="-25.4">
+<attribute name="DESC" x="203.2" y="-25.4" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="203.2" y="-25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="203.2" y="-25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="203.2" y="-25.4" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND17" gate="1" x="213.36" y="-30.48"/>
 <instance part="+3V10" gate="G$1" x="162.56" y="33.02"/>
 <instance part="GND19" gate="1" x="25.4" y="-10.16"/>
-<instance part="SDA-PULLUP" gate="G$1" x="147.32" y="17.78"/>
-<instance part="SCL-PULLUP" gate="G$1" x="147.32" y="25.4"/>
-<instance part="VIN-CAPACITOR" gate="G$1" x="149.86" y="60.96"/>
-<instance part="VDDCORE-CAPACITOR" gate="G$1" x="149.86" y="53.34"/>
-<instance part="AREF-CAPACITOR-1" gate="G$1" x="2.54" y="66.04"/>
-<instance part="AREF-CAPACITOR-2" gate="G$1" x="2.54" y="58.42"/>
-<instance part="ANALOG-CAPACITOR-1" gate="G$1" x="2.54" y="50.8"/>
-<instance part="ANALOG-CAPACITOR-2" gate="G$1" x="2.54" y="43.18"/>
+<instance part="SDA-PULLUP" gate="G$1" x="147.32" y="17.78">
+<attribute name="DESC" x="147.32" y="17.78" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="147.32" y="17.78" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="147.32" y="17.78" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="147.32" y="17.78" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="SCL-PULLUP" gate="G$1" x="147.32" y="25.4">
+<attribute name="DESC" x="147.32" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="147.32" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="147.32" y="25.4" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="147.32" y="25.4" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="VIN-CAPACITOR" gate="G$1" x="149.86" y="60.96">
+<attribute name="DESC" x="149.86" y="60.96" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="149.86" y="60.96" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="149.86" y="60.96" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="149.86" y="60.96" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="VDDCORE-CAPACITOR" gate="G$1" x="149.86" y="53.34">
+<attribute name="DESC" x="149.86" y="53.34" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="149.86" y="53.34" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="149.86" y="53.34" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="149.86" y="53.34" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="AREF-CAPACITOR-1" gate="G$1" x="2.54" y="66.04">
+<attribute name="DESC" x="2.54" y="66.04" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="66.04" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="66.04" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="66.04" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="AREF-CAPACITOR-2" gate="G$1" x="2.54" y="58.42">
+<attribute name="DESC" x="2.54" y="58.42" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="58.42" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="58.42" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="58.42" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="ANALOG-CAPACITOR-1" gate="G$1" x="2.54" y="50.8">
+<attribute name="DESC" x="2.54" y="50.8" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="50.8" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="50.8" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="50.8" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="ANALOG-CAPACITOR-2" gate="G$1" x="2.54" y="43.18">
+<attribute name="DESC" x="2.54" y="43.18" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="43.18" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="43.18" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="43.18" size="1.778" layer="96" display="off"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1193,7 +1455,7 @@ USB</text>
 </segment>
 <segment>
 <pinref part="GND6" gate="1" pin="GND"/>
-<pinref part="VDDIO-2" gate="G$1" pin="P$1"/>
+<pinref part="VDDIO-2" gate="G$1" pin="A"/>
 <wire x1="152.4" y1="35.56" x2="149.86" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -1204,7 +1466,7 @@ USB</text>
 </segment>
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
-<pinref part="VDDIO-1" gate="G$1" pin="P$1"/>
+<pinref part="VDDIO-1" gate="G$1" pin="A"/>
 <wire x1="-2.54" y1="25.4" x2="0" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -1273,7 +1535,7 @@ USB</text>
 <pinref part="REGULATOR-3.3V" gate="G$1" pin="FB"/>
 <wire x1="60.96" y1="-25.4" x2="63.5" y2="-25.4" width="0.1524" layer="91"/>
 <wire x1="63.5" y1="-25.4" x2="63.5" y2="-27.94" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="-27.94" x2="71.12" y2="-30.48" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="-27.94" x2="71.12" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="REGULATOR-3.3V" gate="G$1" pin="ETP"/>
@@ -1303,6 +1565,7 @@ USB</text>
 <wire x1="-7.62" y1="76.2" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="73.66" x2="-5.08" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="76.2" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-7.62" y="76.2"/>
 </segment>
 </net>
 <net name="A0" class="0">
@@ -1359,29 +1622,29 @@ USB</text>
 <label x="127" y="-30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="VDDIO-1" gate="G$1" pin="P$2"/>
+<pinref part="VDDIO-1" gate="G$1" pin="B"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <wire x1="17.78" y1="25.4" x2="15.24" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="25.4" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="ARM-CORTEX-MO+" gate="G$1" pin="VDDIO1:VIN"/>
 <wire x1="17.78" y1="25.4" x2="38.1" y2="25.4" width="0.1524" layer="91"/>
 <label x="22.86" y="25.4" size="1.778" layer="95"/>
+<junction x="17.78" y="25.4"/>
 </segment>
 <segment>
-<pinref part="VDDIO-2" gate="G$1" pin="P$2"/>
+<pinref part="VDDIO-2" gate="G$1" pin="B"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
 <wire x1="132.08" y1="35.56" x2="134.62" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="132.08" y1="35.56" x2="132.08" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="ARM-CORTEX-MO+" gate="G$1" pin="VDDIO2:VIN"/>
 <wire x1="111.76" y1="35.56" x2="132.08" y2="35.56" width="0.1524" layer="91"/>
 <label x="124.46" y="35.56" size="1.778" layer="95"/>
+<junction x="132.08" y="35.56"/>
 </segment>
 <segment>
 <pinref part="REGULATOR-OUT-INDUCTOR" gate="G$1" pin="P$2"/>
 <wire x1="88.9" y1="-20.32" x2="93.98" y2="-20.32" width="0.1524" layer="91"/>
 <junction x="93.98" y="-20.32"/>
-<pinref part="REGULATOR-OUT-RESISTOR" gate="G$1" pin="P$2"/>
-<wire x1="83.82" y1="-12.7" x2="93.98" y2="-12.7" width="0.1524" layer="91"/>
 <pinref part="REGULATOR-3.3V" gate="G$1" pin="VOS"/>
 <wire x1="60.96" y1="-22.86" x2="93.98" y2="-22.86" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="-22.86" x2="93.98" y2="-20.32" width="0.1524" layer="91"/>
@@ -1389,10 +1652,8 @@ USB</text>
 <wire x1="86.36" y1="-27.94" x2="93.98" y2="-27.94" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="-27.94" x2="93.98" y2="-22.86" width="0.1524" layer="91"/>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
-<wire x1="93.98" y1="-20.32" x2="93.98" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="-12.7" x2="93.98" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="-20.32" x2="93.98" y2="-10.16" width="0.1524" layer="91"/>
 <junction x="93.98" y="-22.86"/>
-<junction x="93.98" y="-12.7"/>
 </segment>
 <segment>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
@@ -1858,15 +2119,6 @@ USB</text>
 <pinref part="HEADER-SIDE-B" gate="G$1" pin="TX"/>
 <wire x1="121.92" y1="-22.86" x2="127" y2="-22.86" width="0.1524" layer="91"/>
 <label x="127" y="-22.86" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="REGULATOR-3.3V" gate="G$1" pin="PG"/>
-<wire x1="60.96" y1="-17.78" x2="66.04" y2="-17.78" width="0.1524" layer="91"/>
-<pinref part="REGULATOR-OUT-RESISTOR" gate="G$1" pin="P$1"/>
-<wire x1="68.58" y1="-12.7" x2="66.04" y2="-12.7" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="-12.7" x2="66.04" y2="-17.78" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$1" class="0">

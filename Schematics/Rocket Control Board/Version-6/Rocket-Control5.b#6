@@ -582,10 +582,10 @@ design rules under a new name.</description>
 <attribute name="MF" value="Amphenol FCI" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="MPN" value="10118194-0001LF" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="U$61" library="RocketControlBoard" package="JTAG-MINI" value="JTAG-MINI" x="10.3124" y="0.7112" rot="R90"/>
-<element name="U$41" library="RocketControlBoard" package="SPI-PORT" value="SPI-PORT" x="13.97" y="26.67"/>
-<element name="U$21" library="RocketControlBoard" package="HEADER-SIDE-A" value="HEADER-SIDE-A" x="19.05" y="16.51"/>
-<element name="U$22" library="RocketControlBoard" package="HEADER-SIDE-B" value="HEADER-SIDE-B" x="1.27" y="39.37" rot="R90"/>
+<element name="JTAG-CONNECTOR" library="RocketControlBoard" package="JTAG-MINI" value="JTAG-MINI" x="10.3124" y="0.7112" rot="R90"/>
+<element name="SPI-PORT" library="RocketControlBoard" package="SPI-PORT" value="SPI-PORT" x="13.97" y="26.67"/>
+<element name="HEADER-SIDE-A" library="RocketControlBoard" package="HEADER-SIDE-A" value="HEADER-SIDE-A" x="19.05" y="16.51"/>
+<element name="HEADER-SIDE-B" library="RocketControlBoard" package="HEADER-SIDE-B" value="HEADER-SIDE-B" x="1.27" y="39.37" rot="R90"/>
 <element name="REGULATOR-3.3V" library="RocketControlBoard" package="8-WFDFN-EXPOSED-PAD" value="TPS62172DSGR" x="7.3914" y="30.0736" rot="R180">
 <attribute name="DESC" value="IC REG BUCK 3.3V 0.5A SYNC 8WSON" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIGIKEY" value="296-39449-1-ND" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
@@ -634,7 +634,7 @@ design rules under a new name.</description>
 <attribute name="MF" value="Kingbright" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="APTD1608ZGC" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
 </element>
-<element name="LED-RESISTOR" library="RocketControlBoard" package="C0402" value="330" x="15.113" y="34.4424" rot="R180">
+<element name="LED-RESISTOR" library="RocketControlBoard" package="C0603" value="330" x="15.113" y="34.4424" rot="R180">
 <attribute name="DESC" value="RES SMD 330 OHM 5% 1/10W 0603 " x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="DIGIKEY" value="1276-5050-1-ND" x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
@@ -715,12 +715,12 @@ design rules under a new name.</description>
 <contactref element="VDDIO-1" pad="1"/>
 <contactref element="MICRO-USB-CONNECTOR" pad="5:GND"/>
 <contactref element="ARM-CORTEX-MO+" pad="42"/>
-<contactref element="U$61" pad="GND-3"/>
-<contactref element="U$61" pad="GND-2"/>
-<contactref element="U$61" pad="GND-1"/>
-<contactref element="U$41" pad="GND"/>
-<contactref element="U$22" pad="GND-OUT"/>
-<contactref element="U$22" pad="GND-IN"/>
+<contactref element="JTAG-CONNECTOR" pad="GND-3"/>
+<contactref element="JTAG-CONNECTOR" pad="GND-2"/>
+<contactref element="JTAG-CONNECTOR" pad="GND-1"/>
+<contactref element="SPI-PORT" pad="GND"/>
+<contactref element="HEADER-SIDE-B" pad="GND-OUT"/>
+<contactref element="HEADER-SIDE-B" pad="GND-IN"/>
 <contactref element="REGULATOR-IN-CAPACITOR" pad="1"/>
 <contactref element="REGULATOR-OUT-CAPACITOR" pad="1"/>
 <contactref element="REGULATOR-3.3V" pad="EXPOSED-THERMAL-PAD"/>
@@ -765,7 +765,7 @@ design rules under a new name.</description>
 <wire x1="7.613015625" y1="16.51" x2="7.7216" y2="16.51" width="0.1524" layer="1"/>
 <contactref element="LED-RESISTOR" pad="2"/>
 <via x="12.9794" y="34.4424" extent="1-16" drill="0.3302"/>
-<wire x1="14.463" y1="34.4424" x2="12.9794" y2="34.4424" width="0.1524" layer="1"/>
+<wire x1="14.263" y1="34.4424" x2="12.9794" y2="34.4424" width="0.1524" layer="1"/>
 <wire x1="6.198803125" y1="17.9242125" x2="5.479415625" y2="18.6436" width="0.1524" layer="1"/>
 <wire x1="5.479415625" y1="18.6436" x2="4.6332" y2="18.6436" width="0.1524" layer="1"/>
 <wire x1="4.6332" y1="18.6436" x2="4.1656" y2="18.176" width="0.1524" layer="1"/>
@@ -791,12 +791,13 @@ design rules under a new name.</description>
 <wire x1="5.9332" y1="10.16" x2="4.8006" y2="10.16" width="0.1524" layer="1"/>
 <contactref element="CRYSTAL-CAP-2" pad="1"/>
 <contactref element="CRYSTAL-CAP-1" pad="1"/>
-<wire x1="13.4484" y1="4.191" x2="13.4484" y2="6.2484" width="0" layer="19" extent="1-1"/>
-<wire x1="13.5636" y1="8.5956" x2="13.4484" y2="6.2484" width="0" layer="19" extent="1-1"/>
+<wire x1="13.5636" y1="8.5956" x2="13.4484" y2="8.4804" width="0.1524" layer="1"/>
+<wire x1="13.4484" y1="8.4804" x2="13.4484" y2="6.2484" width="0.1524" layer="1"/>
+<wire x1="13.4484" y1="6.2484" x2="13.4484" y2="4.191" width="0.1524" layer="1"/>
 </signal>
 <signal name="A0">
 <contactref element="ARM-CORTEX-MO+" pad="3"/>
-<contactref element="U$21" pad="A0"/>
+<contactref element="HEADER-SIDE-A" pad="A0"/>
 <via x="10.7696" y="13.462" extent="1-16" drill="0.3302"/>
 <wire x1="12.562765625" y1="12.26735625" x2="11.368121875" y2="13.462" width="0.1524" layer="1"/>
 <wire x1="11.368121875" y1="13.462" x2="10.7696" y2="13.462" width="0.1524" layer="1"/>
@@ -806,7 +807,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="AREF">
 <contactref element="ARM-CORTEX-MO+" pad="4"/>
-<contactref element="U$21" pad="AREF"/>
+<contactref element="HEADER-SIDE-A" pad="AREF"/>
 <wire x1="12.91631875" y1="12.6209125" x2="13.5382" y2="11.99903125" width="0.1524" layer="1"/>
 <via x="11.5316" y="14.224" extent="1-16" drill="0.3302"/>
 <wire x1="12.91631875" y1="12.6209125" x2="11.5316" y2="14.00563125" width="0.1524" layer="1"/>
@@ -824,9 +825,9 @@ design rules under a new name.</description>
 </signal>
 <signal name="+3V3">
 <contactref element="FERRITE-BEAD" pad="1"/>
-<contactref element="U$61" pad="VIN"/>
-<contactref element="U$41" pad="VIN"/>
-<contactref element="U$22" pad="3V3"/>
+<contactref element="JTAG-CONNECTOR" pad="VIN"/>
+<contactref element="SPI-PORT" pad="VIN"/>
+<contactref element="HEADER-SIDE-B" pad="3V3"/>
 <contactref element="VDDIO-1" pad="2"/>
 <contactref element="VDDIO-2" pad="2"/>
 <contactref element="ARM-CORTEX-MO+" pad="17"/>
@@ -876,7 +877,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="A1">
 <contactref element="ARM-CORTEX-MO+" pad="7"/>
-<contactref element="U$21" pad="A1"/>
+<contactref element="HEADER-SIDE-A" pad="A1"/>
 <wire x1="19.05" y1="6.35" x2="17.526" y2="7.874" width="0.1524" layer="1"/>
 <wire x1="13.976978125" y1="13.681571875" x2="16.07615" y2="11.5824" width="0.1524" layer="1"/>
 <wire x1="16.07615" y1="11.5824" x2="16.9926" y2="11.5824" width="0.1524" layer="1"/>
@@ -885,7 +886,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="A2">
 <contactref element="ARM-CORTEX-MO+" pad="8"/>
-<contactref element="U$21" pad="A2"/>
+<contactref element="HEADER-SIDE-A" pad="A2"/>
 <wire x1="19.05" y1="8.89" x2="17.8816" y2="10.0584" width="0.1524" layer="1"/>
 <wire x1="17.8816" y1="10.0584" x2="17.8816" y2="11.2014" width="0.1524" layer="1"/>
 <wire x1="14.33053125" y1="14.035125" x2="16.37685625" y2="11.9888" width="0.1524" layer="1"/>
@@ -894,7 +895,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="A3">
 <contactref element="ARM-CORTEX-MO+" pad="9"/>
-<contactref element="U$21" pad="A3"/>
+<contactref element="HEADER-SIDE-A" pad="A3"/>
 <wire x1="19.05" y1="11.43" x2="18.1864" y2="11.43" width="0.1524" layer="1"/>
 <wire x1="16.6775625" y1="12.3952" x2="14.684084375" y2="14.388678125" width="0.1524" layer="1"/>
 <wire x1="18.1864" y1="11.43" x2="17.2212" y2="12.3952" width="0.1524" layer="1"/>
@@ -902,13 +903,13 @@ design rules under a new name.</description>
 </signal>
 <signal name="A4">
 <contactref element="ARM-CORTEX-MO+" pad="10"/>
-<contactref element="U$21" pad="A4"/>
+<contactref element="HEADER-SIDE-A" pad="A4"/>
 <wire x1="19.05" y1="13.97" x2="15.809871875" y2="13.97" width="0.1524" layer="1"/>
 <wire x1="15.809871875" y1="13.97" x2="15.037640625" y2="14.74223125" width="0.1524" layer="1"/>
 </signal>
 <signal name="D8">
 <contactref element="ARM-CORTEX-MO+" pad="11"/>
-<contactref element="U$22" pad="D8"/>
+<contactref element="HEADER-SIDE-B" pad="D8"/>
 <via x="13.0556" y="15.748" extent="1-16" drill="0.3302"/>
 <wire x1="15.39119375" y1="15.095784375" x2="14.738978125" y2="15.748" width="0.1524" layer="1"/>
 <wire x1="14.738978125" y1="15.748" x2="13.0556" y2="15.748" width="0.1524" layer="1"/>
@@ -919,7 +920,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D9">
 <contactref element="ARM-CORTEX-MO+" pad="12"/>
-<contactref element="U$22" pad="D9"/>
+<contactref element="HEADER-SIDE-B" pad="D9"/>
 <via x="13.8176" y="16.51" extent="1-16" drill="0.3302"/>
 <wire x1="15.744746875" y1="15.4493375" x2="14.684084375" y2="16.51" width="0.1524" layer="1"/>
 <wire x1="14.684084375" y1="16.51" x2="13.8176" y2="16.51" width="0.1524" layer="1"/>
@@ -931,7 +932,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D5">
 <contactref element="ARM-CORTEX-MO+" pad="24"/>
-<contactref element="U$21" pad="D5"/>
+<contactref element="HEADER-SIDE-A" pad="D5"/>
 <via x="12.1158" y="22.987" extent="1-16" drill="0.3302"/>
 <wire x1="15.8496" y1="27.9908" x2="17.0688" y2="27.9908" width="0.1524" layer="16"/>
 <wire x1="17.0688" y1="27.9908" x2="17.8054" y2="28.7274" width="0.1524" layer="16"/>
@@ -945,7 +946,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D4">
 <contactref element="ARM-CORTEX-MO+" pad="23"/>
-<contactref element="U$21" pad="D4"/>
+<contactref element="HEADER-SIDE-A" pad="D4"/>
 <wire x1="12.2092125" y1="21.10619375" x2="13.0302" y2="21.92718125" width="0.1524" layer="1"/>
 <wire x1="13.0302" y1="21.92718125" x2="13.0302" y2="22.987" width="0.1524" layer="1"/>
 <via x="13.0302" y="22.987" extent="1-16" drill="0.3302"/>
@@ -957,7 +958,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="MISO">
 <contactref element="ARM-CORTEX-MO+" pad="21"/>
-<contactref element="U$41" pad="MISO"/>
+<contactref element="SPI-PORT" pad="MISO"/>
 <wire x1="12.91631875" y1="20.399084375" x2="13.8176" y2="21.300365625" width="0.1524" layer="1"/>
 <wire x1="13.8176" y1="21.300365625" x2="13.8176" y2="23.3172" width="0.1524" layer="1"/>
 <wire x1="13.8176" y1="23.3172" x2="12.8778" y2="24.257" width="0.1524" layer="1"/>
@@ -966,7 +967,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="SCK">
 <contactref element="ARM-CORTEX-MO+" pad="20"/>
-<contactref element="U$41" pad="SCK"/>
+<contactref element="SPI-PORT" pad="SCK"/>
 <wire x1="13.269871875" y1="20.04553125" x2="14.2748" y2="21.050459375" width="0.1524" layer="1"/>
 <wire x1="14.2748" y1="21.050459375" x2="14.2748" y2="23.3172" width="0.1524" layer="1"/>
 <wire x1="14.2748" y1="23.3172" x2="15.0368" y2="24.0792" width="0.1524" layer="1"/>
@@ -975,7 +976,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="MOSI">
 <contactref element="ARM-CORTEX-MO+" pad="19"/>
-<contactref element="U$41" pad="MOSI"/>
+<contactref element="SPI-PORT" pad="MOSI"/>
 <wire x1="13.623425" y1="19.691978125" x2="14.6812" y2="20.749753125" width="0.1524" layer="1"/>
 <wire x1="14.6812" y1="20.749753125" x2="14.6812" y2="22.9616" width="0.1524" layer="1"/>
 <wire x1="14.6812" y1="22.9616" x2="15.4432" y2="23.7236" width="0.1524" layer="1"/>
@@ -984,20 +985,20 @@ design rules under a new name.</description>
 </signal>
 <signal name="D1-RX">
 <contactref element="ARM-CORTEX-MO+" pad="16"/>
-<contactref element="U$21" pad="D1"/>
+<contactref element="HEADER-SIDE-A" pad="D1"/>
 <wire x1="14.684084375" y1="18.63131875" x2="15.458365625" y2="19.4056" width="0.1524" layer="1"/>
 <wire x1="19.05" y1="21.59" x2="16.8656" y2="19.4056" width="0.1524" layer="1"/>
 <wire x1="16.8656" y1="19.4056" x2="15.458365625" y2="19.4056" width="0.1524" layer="1"/>
 </signal>
 <signal name="D0-TX">
 <contactref element="ARM-CORTEX-MO+" pad="15"/>
-<contactref element="U$21" pad="D0"/>
+<contactref element="HEADER-SIDE-A" pad="D0"/>
 <wire x1="15.037640625" y1="18.277765625" x2="15.809875" y2="19.05" width="0.1524" layer="1"/>
 <wire x1="15.809875" y1="19.05" x2="19.05" y2="19.05" width="0.1524" layer="1"/>
 </signal>
 <signal name="D3">
 <contactref element="ARM-CORTEX-MO+" pad="14"/>
-<contactref element="U$21" pad="D3"/>
+<contactref element="HEADER-SIDE-A" pad="D3"/>
 <wire x1="15.39119375" y1="17.9242125" x2="15.90738125" y2="18.4404" width="0.1524" layer="1"/>
 <wire x1="15.90738125" y1="18.4404" x2="16.8402" y2="18.4404" width="0.1524" layer="1"/>
 <via x="16.8402" y="18.4404" extent="1-16" drill="0.3302"/>
@@ -1006,7 +1007,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D2">
 <contactref element="ARM-CORTEX-MO+" pad="13"/>
-<contactref element="U$21" pad="D2"/>
+<contactref element="HEADER-SIDE-A" pad="D2"/>
 <wire x1="19.05" y1="24.13" x2="17.7546" y2="22.8346" width="0.1524" layer="16"/>
 <wire x1="17.7546" y1="22.8346" x2="17.7292" y2="18.415" width="0.1524" layer="16"/>
 <via x="17.7292" y="18.415" extent="1-16" drill="0.3302"/>
@@ -1015,7 +1016,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D11">
 <contactref element="ARM-CORTEX-MO+" pad="25"/>
-<contactref element="U$22" pad="D11"/>
+<contactref element="HEADER-SIDE-B" pad="D11"/>
 <via x="8.6106" y="15.621" extent="1-16" drill="0.3302"/>
 <wire x1="9.7343375" y1="21.459746875" x2="11.5316" y2="19.662484375" width="0.1524" layer="1"/>
 <wire x1="1.27" y1="8.89" x2="1.8796" y2="8.89" width="0.1524" layer="16"/>
@@ -1025,7 +1026,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D13">
 <contactref element="ARM-CORTEX-MO+" pad="26"/>
-<contactref element="U$22" pad="D13"/>
+<contactref element="HEADER-SIDE-B" pad="D13"/>
 <via x="8.255" y="21.971" extent="1-16" drill="0.3302"/>
 <wire x1="8.255" y1="21.971" x2="8.515978125" y2="21.971" width="0.1524" layer="1"/>
 <wire x1="8.515978125" y1="21.971" x2="9.380784375" y2="21.10619375" width="0.1524" layer="1"/>
@@ -1034,7 +1035,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D10">
 <contactref element="ARM-CORTEX-MO+" pad="27"/>
-<contactref element="U$22" pad="D10"/>
+<contactref element="HEADER-SIDE-B" pad="D10"/>
 <via x="10.7696" y="19.558" extent="1-16" drill="0.3302"/>
 <wire x1="9.02723125" y1="20.752640625" x2="10.221871875" y2="19.558" width="0.1524" layer="1"/>
 <wire x1="10.221871875" y1="19.558" x2="10.7696" y2="19.558" width="0.1524" layer="1"/>
@@ -1046,7 +1047,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D12">
 <contactref element="ARM-CORTEX-MO+" pad="28"/>
-<contactref element="U$22" pad="D12"/>
+<contactref element="HEADER-SIDE-B" pad="D12"/>
 <via x="10.0076" y="18.796" extent="1-16" drill="0.3302"/>
 <wire x1="8.673678125" y1="20.399084375" x2="10.0076" y2="19.0651625" width="0.1524" layer="1"/>
 <wire x1="10.0076" y1="19.0651625" x2="10.0076" y2="18.796" width="0.1524" layer="1"/>
@@ -1056,7 +1057,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="D6">
 <contactref element="ARM-CORTEX-MO+" pad="29"/>
-<contactref element="U$21" pad="D6"/>
+<contactref element="HEADER-SIDE-A" pad="D6"/>
 <via x="11.2014" y="22.987" extent="1-16" drill="0.3302"/>
 <via x="9.2456" y="18.034" extent="1-16" drill="0.3302"/>
 <wire x1="8.320125" y1="20.04553125" x2="9.2456" y2="19.12005625" width="0.1524" layer="1"/>
@@ -1071,8 +1072,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="D7">
 <contactref element="ARM-CORTEX-MO+" pad="30"/>
-<contactref element="U$41" pad="ATN"/>
-<contactref element="U$21" pad="D7"/>
+<contactref element="SPI-PORT" pad="ATN"/>
+<contactref element="HEADER-SIDE-A" pad="D7"/>
 <via x="8.4836" y="17.272" extent="1-16" drill="0.3302"/>
 <wire x1="7.966571875" y1="19.691978125" x2="8.4836" y2="19.17495" width="0.1524" layer="1"/>
 <wire x1="8.4836" y1="19.17495" x2="8.4836" y2="17.272" width="0.1524" layer="1"/>
@@ -1086,7 +1087,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="SDA">
 <contactref element="ARM-CORTEX-MO+" pad="31"/>
-<contactref element="U$22" pad="SDA"/>
+<contactref element="HEADER-SIDE-B" pad="SDA"/>
 <via x="7.3406" y="21.9964" extent="1-16" drill="0.3302"/>
 <wire x1="1.27" y1="24.13" x2="2.6416" y2="22.7584" width="0.1524" layer="16"/>
 <wire x1="2.6416" y1="22.7584" x2="6.9342" y2="22.7584" width="0.1524" layer="16"/>
@@ -1101,7 +1102,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="SCL">
 <contactref element="ARM-CORTEX-MO+" pad="32"/>
-<contactref element="U$22" pad="SCL"/>
+<contactref element="HEADER-SIDE-B" pad="SCL"/>
 <via x="6.4008" y="22.0218" extent="1-16" drill="0.3302"/>
 <wire x1="1.27" y1="21.59" x2="1.7018" y2="22.0218" width="0.1524" layer="16"/>
 <wire x1="1.7018" y1="22.0218" x2="6.4008" y2="22.0218" width="0.1524" layer="16"/>
@@ -1137,7 +1138,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="USB">
 <contactref element="MICRO-USB-CONNECTOR" pad="1:VBUS"/>
-<contactref element="U$22" pad="USB"/>
+<contactref element="HEADER-SIDE-B" pad="USB"/>
 <contactref element="DIODE-USB" pad="P$1"/>
 <wire x1="9.9614" y1="35.2806" x2="9.9614" y2="34.0284" width="0.1524" layer="1"/>
 <wire x1="9.9614" y1="35.2806" x2="2.8194" y2="35.2806" width="0.1524" layer="1"/>
@@ -1148,14 +1149,14 @@ design rules under a new name.</description>
 </signal>
 <signal name="RX">
 <contactref element="ARM-CORTEX-MO+" pad="38"/>
-<contactref element="U$22" pad="RX"/>
+<contactref element="HEADER-SIDE-B" pad="RX"/>
 <wire x1="6.198803125" y1="15.095784375" x2="5.60641875" y2="14.5034" width="0.1524" layer="1"/>
 <wire x1="5.60641875" y1="14.5034" x2="3.2766" y2="14.5034" width="0.1524" layer="1"/>
 <wire x1="3.2766" y1="14.5034" x2="1.27" y2="16.51" width="0.1524" layer="1"/>
 </signal>
 <signal name="SWD-06(RESET)">
 <contactref element="ARM-CORTEX-MO+" pad="40"/>
-<contactref element="U$61" pad="RESET"/>
+<contactref element="JTAG-CONNECTOR" pad="RESET"/>
 <wire x1="9.6774" y1="2.6162" x2="9.6774" y2="4.1148" width="0.1524" layer="16"/>
 <wire x1="9.6774" y1="4.1148" x2="7.3406" y2="6.4516" width="0.1524" layer="16"/>
 <via x="7.3406" y="6.4516" extent="1-16" drill="0.3302"/>
@@ -1173,14 +1174,14 @@ design rules under a new name.</description>
 <wire x1="5.9436" y1="11.5974" x2="5.9436" y2="11.4704" width="0.1524" layer="1"/>
 </signal>
 <signal name="VIN">
-<contactref element="U$22" pad="VIN"/>
+<contactref element="HEADER-SIDE-B" pad="VIN"/>
 <contactref element="DIODE-VIN" pad="P$1"/>
 <wire x1="1.27" y1="31.75" x2="1.4224" y2="31.9024" width="0.1524" layer="1"/>
 <wire x1="1.4224" y1="31.9024" x2="5.9436" y2="31.9024" width="0.1524" layer="1"/>
 </signal>
 <signal name="A5">
 <contactref element="ARM-CORTEX-MO+" pad="47"/>
-<contactref element="U$21" pad="A5"/>
+<contactref element="HEADER-SIDE-A" pad="A5"/>
 <wire x1="9.380784375" y1="11.913803125" x2="9.9568" y2="12.48981875" width="0.1524" layer="1"/>
 <wire x1="9.9568" y1="12.48981875" x2="9.9568" y2="13.843" width="0.1524" layer="1"/>
 <wire x1="9.9568" y1="13.843" x2="13.335" y2="17.2212" width="0.1524" layer="1"/>
@@ -1190,7 +1191,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="SWD-10">
 <contactref element="ARM-CORTEX-MO+" pad="46"/>
-<contactref element="U$61" pad="JTAG10"/>
+<contactref element="JTAG-CONNECTOR" pad="JTAG10"/>
 <via x="8.255" y="4.1402" extent="1-16" drill="0.3302"/>
 <wire x1="6.1214" y1="4.1402" x2="4.5974" y2="2.6162" width="0.1524" layer="16"/>
 <wire x1="9.02723125" y1="12.26735625" x2="8.255" y2="11.495125" width="0.1524" layer="1"/>
@@ -1199,7 +1200,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="SWD-09">
 <contactref element="ARM-CORTEX-MO+" pad="45"/>
-<contactref element="U$61" pad="JTAG09"/>
+<contactref element="JTAG-CONNECTOR" pad="JTAG09"/>
 <wire x1="8.673678125" y1="12.6209125" x2="7.9502" y2="11.897434375" width="0.1524" layer="1"/>
 <wire x1="7.9502" y1="11.897434375" x2="7.9502" y2="4.9022" width="0.1524" layer="1"/>
 <wire x1="7.9502" y1="4.9022" x2="5.8674" y2="2.8194" width="0.1524" layer="1"/>
@@ -1207,7 +1208,7 @@ design rules under a new name.</description>
 </signal>
 <signal name="TX">
 <contactref element="ARM-CORTEX-MO+" pad="37"/>
-<contactref element="U$22" pad="TX"/>
+<contactref element="HEADER-SIDE-B" pad="TX"/>
 <wire x1="1.27" y1="19.05" x2="1.27" y2="18.3642" width="0.1524" layer="1"/>
 <wire x1="1.27" y1="18.3642" x2="4.1848625" y2="15.4493375" width="0.1524" layer="1"/>
 <wire x1="4.1848625" y1="15.4493375" x2="5.84525" y2="15.4493375" width="0.1524" layer="1"/>
@@ -1242,7 +1243,7 @@ design rules under a new name.</description>
 <signal name="N$2">
 <contactref element="POWER-LED" pad="2"/>
 <contactref element="LED-RESISTOR" pad="1"/>
-<wire x1="15.963" y1="36.7284" x2="15.763" y2="34.4424" width="0.1524" layer="1"/>
+<wire x1="15.963" y1="36.7284" x2="15.963" y2="34.4424" width="0.1524" layer="1"/>
 </signal>
 <signal name="USB-ID">
 <contactref element="ARM-CORTEX-MO+" pad="41"/>
