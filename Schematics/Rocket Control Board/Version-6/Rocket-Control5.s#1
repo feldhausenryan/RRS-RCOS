@@ -1091,11 +1091,21 @@ USB</text>
 <attribute name="MANF" value="Amphenol FCI"/>
 <attribute name="MANF#" value="20021111-00010T4LF"/>
 </part>
-<part name="SPI-PORT" library="RocketControlBoard" deviceset="SPI-PORT" device=""/>
+<part name="SPI-PORT" library="RocketControlBoard" deviceset="SPI-PORT" device="">
+<attribute name="NOTE" value="The 40 piece header fits the SPI port."/>
+</part>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="+3V7" library="supply1" deviceset="+3V3" device=""/>
-<part name="HEADER-SIDE-A" library="RocketControlBoard" deviceset="HEADER-SIDE-A" device=""/>
-<part name="HEADER-SIDE-B" library="RocketControlBoard" deviceset="HEADER-SIDE-B" device=""/>
+<part name="HEADER-SIDE-A" library="RocketControlBoard" deviceset="HEADER-SIDE-A" device="">
+<attribute name="DESC" value="CONN HEADER .100&quot; SNGL STR 40POS "/>
+<attribute name="NOTE" value="One strip appears on the BOM. "/>
+</part>
+<part name="HEADER-SIDE-B" library="RocketControlBoard" deviceset="HEADER-SIDE-B" device="">
+<attribute name="DESC" value="CONN HEADER .100&quot; SNGL STR 40POS "/>
+<attribute name="DIGIKEY#" value="S1011EC-40-ND"/>
+<attribute name="MANF" value="Sullins Connector Solutions"/>
+<attribute name="MANF#" value="PRPC040SAAN-RC"/>
+</part>
 <part name="REGULATOR-3.3V" library="RocketControlBoard" deviceset="TPS62172DSGR" device="">
 <attribute name="DESC" value="IC REG BUCK 3.3V 0.5A SYNC 8WSON"/>
 <attribute name="DIGIKEY#" value="296-39449-1-ND"/>
@@ -1277,11 +1287,21 @@ USB</text>
 <attribute name="MANF" x="195.58" y="63.5" size="1.778" layer="96" display="off"/>
 <attribute name="MANF#" x="195.58" y="63.5" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="SPI-PORT" gate="G$1" x="203.2" y="5.08"/>
+<instance part="SPI-PORT" gate="G$1" x="203.2" y="5.08">
+<attribute name="NOTE" x="203.2" y="5.08" size="1.778" layer="96" display="off"/>
+</instance>
 <instance part="GND15" gate="1" x="175.26" y="-7.62"/>
 <instance part="+3V7" gate="G$1" x="175.26" y="12.7"/>
-<instance part="HEADER-SIDE-A" gate="G$1" x="144.78" y="-40.64" rot="R180"/>
-<instance part="HEADER-SIDE-B" gate="G$1" x="121.92" y="-40.64" rot="R180"/>
+<instance part="HEADER-SIDE-A" gate="G$1" x="144.78" y="-40.64" rot="R180">
+<attribute name="DESC" x="144.78" y="-40.64" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="NOTE" x="144.78" y="-40.64" size="1.778" layer="96" rot="R180" display="off"/>
+</instance>
+<instance part="HEADER-SIDE-B" gate="G$1" x="121.92" y="-40.64" rot="R180">
+<attribute name="DESC" x="121.92" y="-40.64" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="DIGIKEY#" x="121.92" y="-40.64" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="MANF" x="121.92" y="-40.64" size="1.778" layer="96" rot="R180" display="off"/>
+<attribute name="MANF#" x="121.92" y="-40.64" size="1.778" layer="96" rot="R180" display="off"/>
+</instance>
 <instance part="REGULATOR-3.3V" gate="G$1" x="45.72" y="-20.32">
 <attribute name="DESC" x="45.72" y="-20.32" size="1.778" layer="96" display="off"/>
 <attribute name="DIGIKEY#" x="45.72" y="-20.32" size="1.778" layer="96" display="off"/>

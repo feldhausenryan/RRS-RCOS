@@ -1070,10 +1070,10 @@ USB</text>
 </plain>
 <instances>
 <instance part="ARM-CORTEX-MO+" gate="G$1" x="38.1" y="68.58"/>
-<instance part="CRYSTAL-CAP-2" gate="G$1" x="-15.24" y="83.82"/>
-<instance part="CRYSTAL-CAP-1" gate="G$1" x="-15.24" y="73.66"/>
-<instance part="GND1" gate="1" x="-25.4" y="71.12"/>
-<instance part="OSC-CRYSTAL" gate="G$1" x="0" y="78.74" rot="R90"/>
+<instance part="CRYSTAL-CAP-2" gate="G$1" x="2.54" y="83.82"/>
+<instance part="CRYSTAL-CAP-1" gate="G$1" x="2.54" y="73.66"/>
+<instance part="GND1" gate="1" x="-12.7" y="71.12"/>
+<instance part="OSC-CRYSTAL" gate="G$1" x="15.24" y="78.74" rot="R90"/>
 <instance part="GND2" gate="1" x="-12.7" y="58.42"/>
 <instance part="FERRITE-BEAD" gate="G$1" x="2.54" y="35.56"/>
 <instance part="GND3" gate="1" x="-12.7" y="43.18"/>
@@ -1136,10 +1136,10 @@ USB</text>
 <wire x1="20.32" y1="68.58" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="OSC-CRYSTAL" gate="G$1" pin="B"/>
 <pinref part="CRYSTAL-CAP-2" gate="G$1" pin="B"/>
-<wire x1="0" y1="86.36" x2="-7.62" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="86.36" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
-<junction x="0" y="86.36"/>
-<wire x1="20.32" y1="86.36" x2="0" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="86.36" x2="10.16" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="86.36" x2="10.16" y2="83.82" width="0.1524" layer="91"/>
+<junction x="15.24" y="86.36"/>
+<wire x1="20.32" y1="86.36" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CRYSTAL-B" class="0">
@@ -1148,24 +1148,14 @@ USB</text>
 <label x="22.86" y="66.04" size="1.778" layer="95"/>
 <wire x1="38.1" y1="66.04" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="66.04" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="71.12" x2="0" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="OSC-CRYSTAL" gate="G$1" pin="A"/>
 <pinref part="CRYSTAL-CAP-1" gate="G$1" pin="B"/>
-<wire x1="0" y1="71.12" x2="-7.62" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="-7.62" y1="71.12" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
-<junction x="0" y="71.12"/>
+<wire x1="15.24" y1="71.12" x2="10.16" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="10.16" y1="71.12" x2="10.16" y2="73.66" width="0.1524" layer="91"/>
+<junction x="15.24" y="71.12"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="CRYSTAL-CAP-1" gate="G$1" pin="A"/>
-<wire x1="-22.86" y1="73.66" x2="-25.4" y2="73.66" width="0.1524" layer="91"/>
-<pinref part="CRYSTAL-CAP-2" gate="G$1" pin="A"/>
-<wire x1="-25.4" y1="73.66" x2="-25.4" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="-25.4" y1="83.82" x2="-22.86" y2="83.82" width="0.1524" layer="91"/>
-<pinref part="GND1" gate="1" pin="GND"/>
-<junction x="-25.4" y="73.66"/>
-</segment>
 <segment>
 <wire x1="-5.08" y1="66.04" x2="-7.62" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="66.04" x2="-7.62" y2="60.96" width="0.1524" layer="91"/>
@@ -1301,6 +1291,18 @@ USB</text>
 <wire x1="-86.36" y1="-33.02" x2="-86.36" y2="-43.18" width="0.1524" layer="91"/>
 <pinref part="REGULATOR-3.3V" gate="G$1" pin="PGND"/>
 <wire x1="-76.2" y1="-43.18" x2="-86.36" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="GND1" gate="1" pin="GND"/>
+<wire x1="-12.7" y1="73.66" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="CRYSTAL-CAP-2" gate="G$1" pin="A"/>
+<wire x1="-5.08" y1="83.82" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="83.82" x2="-7.62" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="CRYSTAL-CAP-1" gate="G$1" pin="A"/>
+<wire x1="-7.62" y1="76.2" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="73.66" x2="-5.08" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="-7.62" y1="76.2" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
+<junction x="-7.62" y="76.2"/>
 </segment>
 </net>
 <net name="A0" class="0">

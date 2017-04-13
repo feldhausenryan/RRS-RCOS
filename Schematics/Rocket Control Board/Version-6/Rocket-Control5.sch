@@ -196,17 +196,6 @@
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
-<package name="4-SOJ:CRYSTAL">
-<smd name="4:N/C" x="2.75" y="-1.6" dx="1.3" dy="1.9" layer="1"/>
-<smd name="3:N/C" x="2.75" y="1.6" dx="1.3" dy="1.9" layer="1"/>
-<smd name="1:CRYSTAL" x="-2.75" y="1.6" dx="1.3" dy="1.9" layer="1"/>
-<smd name="2:CRYSTAL" x="-2.75" y="-1.6" dx="1.3" dy="1.9" layer="1"/>
-<wire x1="-4" y1="1.6" x2="4" y2="1.6" width="0.127" layer="21"/>
-<wire x1="4" y1="1.6" x2="4" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="4" y1="-1.6" x2="-4" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="-4" y1="-1.6" x2="-4" y2="1.6" width="0.127" layer="21"/>
-<text x="0" y="0" size="0.6096" layer="21" align="center">CRYSTAL</text>
-</package>
 <package name="10118194-0001LF">
 <smd name="3:D+" x="2.7" y="0" dx="1.35" dy="0.4" layer="1"/>
 <smd name="2:D-" x="2.7" y="0.65" dx="1.35" dy="0.4" layer="1"/>
@@ -337,6 +326,10 @@
 <wire x1="0.42545" y1="-0.127" x2="0.42545" y2="0" width="0.0635" layer="21"/>
 <wire x1="0.42545" y1="0" x2="0.42545" y2="0.127" width="0.0635" layer="21"/>
 </package>
+<package name="ABS07-32.768KHZ-T">
+<smd name="P$1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<smd name="P$2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -394,21 +387,6 @@
 <wire x1="68.58" y1="-63.5" x2="5.08" y2="-63.5" width="0.254" layer="94"/>
 <text x="27.94" y="-33.02" size="1.778" layer="94">ATSAML21G18B-AUT
 ARM Cortex M0+</text>
-</symbol>
-<symbol name="ABS25-32.768KHZ-6-T">
-<pin name="A" x="-7.62" y="0" visible="off" length="middle"/>
-<pin name="B" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
-<wire x1="-1.016" y1="2.54" x2="-1.016" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-1.016" y1="-2.54" x2="1.016" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="1.016" y1="-2.54" x2="1.016" y2="2.54" width="0.254" layer="94"/>
-<wire x1="1.016" y1="2.54" x2="-1.016" y2="2.54" width="0.254" layer="94"/>
-<wire x1="1.778" y1="2.54" x2="1.778" y2="0" width="0.254" layer="94"/>
-<wire x1="1.778" y1="0" x2="1.778" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-1.778" y1="-2.54" x2="-1.778" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.778" y1="0" x2="-1.778" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-1.778" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="1.778" y2="0" width="0.254" layer="94"/>
-<text x="0" y="3.81" size="1.27" layer="95" align="center">&gt;Name</text>
 </symbol>
 <symbol name="BLM18PG471SN1D">
 <pin name="P$1" x="-7.62" y="0" visible="off" length="middle"/>
@@ -606,6 +584,16 @@ USB</text>
 <pin name="P$2" x="7.62" y="0" visible="off" length="middle" rot="R180"/>
 <text x="0" y="3.81" size="1.27" layer="95" align="center">&gt;Name</text>
 </symbol>
+<symbol name="ABS07-32.768KHZ-T">
+<pin name="P$1" x="-5.08" y="0" visible="off" length="short"/>
+<pin name="P$2" x="5.08" y="0" visible="off" length="short" rot="R180"/>
+<wire x1="-1.778" y1="5.08" x2="-1.778" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-1.778" y1="-5.08" x2="1.778" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-5.08" x2="1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="1.778" y1="5.08" x2="-1.778" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="ATSAML21G18B-AUT">
@@ -664,23 +652,6 @@ USB</text>
 <connect gate="G$1" pin="VDDIN:VIN" pad="44"/>
 <connect gate="G$1" pin="VDDIO1:VIN" pad="17"/>
 <connect gate="G$1" pin="VDDIO2:VIN" pad="36"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="ABS25-32.768KHZ-6-T">
-<description>Oscillating crystal</description>
-<gates>
-<gate name="G$1" symbol="ABS25-32.768KHZ-6-T" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="4-SOJ:CRYSTAL">
-<connects>
-<connect gate="G$1" pin="A" pad="1:CRYSTAL"/>
-<connect gate="G$1" pin="B" pad="2:CRYSTAL"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -958,6 +929,27 @@ USB</text>
 </device>
 </devices>
 </deviceset>
+<deviceset name="ABS07-32.768KHZ-T">
+<gates>
+<gate name="G$1" symbol="ABS07-32.768KHZ-T" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ABS07-32.768KHZ-T">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESC" value="CRYSTAL 32.7680KHZ 12.5PF SMD"/>
+<attribute name="DIGIKEY#" value="535-9542-1-ND"/>
+<attribute name="MANF" value="Abracon LLC"/>
+<attribute name="MANF#" value="ABS07-32.768KHZ-T"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -1028,25 +1020,7 @@ USB</text>
 <attribute name="MANF" value="Microchip Technology"/>
 <attribute name="MANF#" value="ATSAML21G18B-AUT"/>
 </part>
-<part name="CRYSTAL-CAP-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="6.8pF">
-<attribute name="DESC" value="CAP CER 6.8PF 50V NP0 0603"/>
-<attribute name="DIGIKEY#" value="1276-2332-1-ND"/>
-<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
-<attribute name="MANF#" value="CL10C6R8BB8NNNC"/>
-</part>
-<part name="CRYSTAL-CAP-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="6.8pF">
-<attribute name="DESC" value="CAP CER 6.8PF 50V NP0 0603"/>
-<attribute name="DIGIKEY#" value="1276-2332-1-ND"/>
-<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
-<attribute name="MANF#" value="CL10C6R8BB8NNNC"/>
-</part>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
-<part name="OSC-CRYSTAL" library="RocketControlBoard" deviceset="ABS25-32.768KHZ-6-T" device="">
-<attribute name="DESC" value="CRYSTAL 32.7680KHZ 6PF SMD"/>
-<attribute name="DIGIKEY#" value="535-10240-1-ND"/>
-<attribute name="MANF" value="Abracon LLC"/>
-<attribute name="MANF#" value="ABS25-32.768KHZ-6-T"/>
-</part>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
 <part name="FERRITE-BEAD" library="RocketControlBoard" deviceset="BLM18PG471SN1D" device="">
 <attribute name="DESC" value="FERRITE BEAD 470 OHM 0603 1LN"/>
@@ -1211,6 +1185,19 @@ USB</text>
 <attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
 <attribute name="MANF#" value="CL05A106MP5NUNC"/>
 </part>
+<part name="U$1" library="RocketControlBoard" deviceset="ABS07-32.768KHZ-T" device=""/>
+<part name="OSC-CAPACITOR-1" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="22pF">
+<attribute name="DESC" value="CAP CER 22PF 50V NP0 0603"/>
+<attribute name="DIGIKEY#" value="1276-2229-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL10C220JB8NNWC"/>
+</part>
+<part name="OSC-CAPACITOR-2" library="RocketControlBoard" deviceset="CAPACITOR" device="C0603" value="22pF">
+<attribute name="DESC" value="CAP CER 22PF 50V NP0 0603"/>
+<attribute name="DIGIKEY#" value="1276-2229-1-ND"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc."/>
+<attribute name="MANF#" value="CL10C220JB8NNWC"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -1224,25 +1211,7 @@ USB</text>
 <attribute name="MANF" x="38.1" y="68.58" size="1.778" layer="96" display="off"/>
 <attribute name="MANF#" x="38.1" y="68.58" size="1.778" layer="96" display="off"/>
 </instance>
-<instance part="CRYSTAL-CAP-2" gate="G$1" x="2.54" y="83.82">
-<attribute name="DESC" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
-<attribute name="DIGIKEY#" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
-<attribute name="MANF" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
-<attribute name="MANF#" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
-</instance>
-<instance part="CRYSTAL-CAP-1" gate="G$1" x="2.54" y="73.66">
-<attribute name="DESC" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
-<attribute name="DIGIKEY#" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
-<attribute name="MANF" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
-<attribute name="MANF#" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
-</instance>
 <instance part="GND1" gate="1" x="-12.7" y="71.12"/>
-<instance part="OSC-CRYSTAL" gate="G$1" x="15.24" y="78.74" rot="R90">
-<attribute name="DESC" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="DIGIKEY#" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MANF" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-<attribute name="MANF#" x="15.24" y="78.74" size="1.778" layer="96" rot="R90" display="off"/>
-</instance>
 <instance part="GND2" gate="1" x="-12.7" y="58.42"/>
 <instance part="FERRITE-BEAD" gate="G$1" x="2.54" y="35.56">
 <attribute name="DESC" x="2.54" y="35.56" size="1.778" layer="96" display="off"/>
@@ -1407,6 +1376,19 @@ USB</text>
 <attribute name="MANF" x="2.54" y="43.18" size="1.778" layer="96" display="off"/>
 <attribute name="MANF#" x="2.54" y="43.18" size="1.778" layer="96" display="off"/>
 </instance>
+<instance part="U$1" gate="G$1" x="10.16" y="78.74" rot="R90"/>
+<instance part="OSC-CAPACITOR-1" gate="G$1" x="2.54" y="83.82">
+<attribute name="DESC" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="83.82" size="1.778" layer="96" display="off"/>
+</instance>
+<instance part="OSC-CAPACITOR-2" gate="G$1" x="2.54" y="73.66">
+<attribute name="DESC" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+<attribute name="DIGIKEY#" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+<attribute name="MANF" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+<attribute name="MANF#" x="2.54" y="73.66" size="1.778" layer="96" display="off"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -1417,12 +1399,11 @@ USB</text>
 <label x="22.86" y="68.58" size="1.778" layer="95"/>
 <wire x1="38.1" y1="68.58" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="20.32" y1="68.58" x2="20.32" y2="86.36" width="0.1524" layer="91"/>
-<pinref part="OSC-CRYSTAL" gate="G$1" pin="B"/>
-<pinref part="CRYSTAL-CAP-2" gate="G$1" pin="B"/>
-<wire x1="15.24" y1="86.36" x2="10.16" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="86.36" x2="10.16" y2="83.82" width="0.1524" layer="91"/>
-<junction x="15.24" y="86.36"/>
-<wire x1="20.32" y1="86.36" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="86.36" x2="10.16" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="P$2"/>
+<pinref part="OSC-CAPACITOR-1" gate="G$1" pin="B"/>
+<junction x="10.16" y="83.82"/>
 </segment>
 </net>
 <net name="CRYSTAL-B" class="0">
@@ -1431,11 +1412,11 @@ USB</text>
 <label x="22.86" y="66.04" size="1.778" layer="95"/>
 <wire x1="38.1" y1="66.04" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="66.04" x2="15.24" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="OSC-CRYSTAL" gate="G$1" pin="A"/>
-<pinref part="CRYSTAL-CAP-1" gate="G$1" pin="B"/>
 <wire x1="15.24" y1="71.12" x2="10.16" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="10.16" y1="71.12" x2="10.16" y2="73.66" width="0.1524" layer="91"/>
-<junction x="15.24" y="71.12"/>
+<pinref part="U$1" gate="G$1" pin="P$1"/>
+<pinref part="OSC-CAPACITOR-2" gate="G$1" pin="B"/>
+<junction x="10.16" y="73.66"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -1578,14 +1559,14 @@ USB</text>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="-12.7" y1="73.66" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="CRYSTAL-CAP-2" gate="G$1" pin="A"/>
 <wire x1="-5.08" y1="83.82" x2="-7.62" y2="83.82" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="83.82" x2="-7.62" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="CRYSTAL-CAP-1" gate="G$1" pin="A"/>
 <wire x1="-7.62" y1="76.2" x2="-7.62" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="73.66" x2="-5.08" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="76.2" x2="-12.7" y2="76.2" width="0.1524" layer="91"/>
 <junction x="-7.62" y="76.2"/>
+<pinref part="OSC-CAPACITOR-1" gate="G$1" pin="A"/>
+<pinref part="OSC-CAPACITOR-2" gate="G$1" pin="A"/>
 </segment>
 </net>
 <net name="A0" class="0">

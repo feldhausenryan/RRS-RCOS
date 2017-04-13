@@ -1051,7 +1051,7 @@ USB</text>
 <part name="DIODE-VIN" library="RocketControlBoard" deviceset="CTS05S40,L3F" device=""/>
 <part name="POWER-LED" library="RocketControlBoard" deviceset="APTD1608ZGC" device=""/>
 <part name="+3V9" library="supply1" deviceset="+3V3" device=""/>
-<part name="LED-RESISTOR" library="RocketControlBoard" deviceset="RESISTOR" device="C0402" value="330"/>
+<part name="LED-RESISTOR" library="RocketControlBoard" deviceset="RESISTOR" device="C0603" value="330"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="+3V10" library="supply1" deviceset="+3V3" device=""/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
@@ -1066,6 +1066,7 @@ USB</text>
 </parts>
 <sheets>
 <sheet>
+<description>Mini Zero Version 5</description>
 <plain>
 </plain>
 <instances>

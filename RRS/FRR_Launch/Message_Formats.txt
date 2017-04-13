@@ -1,0 +1,17 @@
+MESSAGE, Time Stamp (int milliseconds), Message Text (string), Value (string)
+ERROR,   Time Stamp (int milliseconds), Error Message (string)
+ALT,     Time Stamp (int milliseconds), AltitudeToGround (int)
+ACCEL,   Time Stamp (int milliseconds), Accel-X, Accel-Y, Accel-Z (float x3)
+MAG,     Time Stamp (int milliseconds), Mag-X,   Mag-Y,   Mag-Z   (float x3)
+GYRO,    Time Stamp (int milliseconds), Gyro-X,  Gyro-Y,  Gyro-Z  (float x3)
+GPS,     Time Stamp (int milliseconds), Hour,    Minutes, Seconds, Day, Month, Year, Fix, Fix Quality, Latitude, Longitude, Speed, Angle, Altitude, Satelites (just treat them all as floats)
+MOTORA,  Time Stamp (int milliseconds), Offset Degrees (1 decimal point)
+MOTORB,  Time Stamp (int milliseconds), Offset Degrees (1 decimal point)
+PHASE,   Time Stamp (int milliseconds), Phase (string)
+					 - Startup
+					 - Waiting For Launch
+					 - Pre Deployment
+					 - Deployment
+					 - Landing
+					 - Landed
+					 
