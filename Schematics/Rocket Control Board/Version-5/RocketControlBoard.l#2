@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.6.0">
+<eagle version="8.1.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -669,6 +669,27 @@
 <smd name="P$1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
 <smd name="P$2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
 </package>
+<package name="DPAK-3">
+<smd name="VIN" x="-2.3" y="-6.9" dx="2.5" dy="1.5" layer="1" rot="R90"/>
+<smd name="VOUT" x="2.3" y="-6.9" dx="2.5" dy="1.5" layer="1" rot="R90"/>
+<smd name="GND" x="0" y="0" dx="7" dy="7" layer="1" rot="R90"/>
+</package>
+<package name="DIODE-STANDARD">
+<smd name="CATHODE" x="0" y="0" dx="1" dy="1" layer="1" rot="R90"/>
+<smd name="ANODE" x="-0.95" y="-2.4" dx="1" dy="1" layer="1" rot="R90"/>
+<smd name="N/C" x="0.95" y="-2.4" dx="1" dy="1" layer="1" rot="R90"/>
+</package>
+<package name="MIC5528">
+<smd name="N/C" x="0" y="0.525" dx="0.35" dy="0.18" layer="1" rot="R90"/>
+<smd name="GND@2" x="0" y="0" dx="0.94" dy="0.3" layer="1" rot="R180"/>
+<smd name="VIN" x="-0.4" y="0.525" dx="0.35" dy="0.18" layer="1" rot="R90"/>
+<smd name="EN" x="0.4" y="0.525" dx="0.35" dy="0.18" layer="1" rot="R90"/>
+<smd name="VOUT@2" x="0" y="-0.525" dx="0.35" dy="0.18" layer="1" rot="R90"/>
+<smd name="VOUT@1" x="-0.4" y="-0.525" dx="0.35" dy="0.18" layer="1" rot="R90"/>
+<smd name="GND@1" x="0.4" y="-0.525" dx="0.35" dy="0.18" layer="1" rot="R90"/>
+<wire x1="-0.635" y1="-0.5715" x2="-0.635" y2="-0.8255" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="-0.8255" x2="-0.381" y2="-0.8255" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -1226,6 +1247,39 @@ USB</text>
 <wire x1="1.778" y1="5.08" x2="-1.778" y2="5.08" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="2.54" y1="5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="REGULATOR-LINEAR-3.3V">
+<pin name="VIN" x="-5.08" y="2.54" length="middle"/>
+<pin name="GND" x="-5.08" y="0" length="middle"/>
+<pin name="VOUT" x="-5.08" y="-2.54" length="middle"/>
+<wire x1="0" y1="-5.08" x2="0" y2="5.08" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="15.24" y2="5.08" width="0.254" layer="94"/>
+<wire x1="15.24" y1="5.08" x2="15.24" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="DIODE-STANDARD">
+<pin name="ANODE" x="-10.16" y="0" length="middle"/>
+<pin name="CATHODE" x="-10.16" y="-7.62" length="middle"/>
+<wire x1="-7.62" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-5.08" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+</symbol>
+<symbol name="MIC5528">
+<pin name="VOUT@1" x="-7.62" y="0" length="middle"/>
+<pin name="VOUT@2" x="-7.62" y="-2.54" length="middle"/>
+<pin name="VIN" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="EN" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<pin name="GND@2" x="-7.62" y="-5.08" length="middle"/>
+<pin name="GND@1" x="22.86" y="-5.08" length="middle" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1977,6 +2031,91 @@ USB</text>
 <connect gate="G$1" pin="LV2" pad="LV2"/>
 <connect gate="G$1" pin="LV3" pad="LV3"/>
 <connect gate="G$1" pin="LV4" pad="LV4"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ABS07-32.768KHZ-T">
+<gates>
+<gate name="G$1" symbol="ABS07-32.768KHZ-T" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ABS07-32.768KHZ-T">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESC" value="CRYSTAL 32.7680KHZ 12.5PF SMD"/>
+<attribute name="DESCRIPTION" value="Crystal"/>
+<attribute name="DIGIKEY#" value="535-9542-1-ND"/>
+<attribute name="MANF" value="Abracon LLC"/>
+<attribute name="MANF#" value="ABS07-32.768KHZ-T"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3.3V-LINEAR-REG">
+<gates>
+<gate name="G$1" symbol="REGULATOR-LINEAR-3.3V" x="-7.62" y="0"/>
+</gates>
+<devices>
+<device name="" package="DPAK-3">
+<connects>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+<connect gate="G$1" pin="VOUT" pad="VOUT"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESC" value="IC REG LDO 3.3V 0.5A DPAK"/>
+<attribute name="DIGIKEY#" value="NCP5501DT33GOS-ND"/>
+<attribute name="MANF" value="ON Semiconductor"/>
+<attribute name="MANF#" value="NCP5501DT33G"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DIODE-STANDARD">
+<gates>
+<gate name="G$1" symbol="DIODE-STANDARD" x="5.08" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="DIODE-STANDARD">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="ANODE"/>
+<connect gate="G$1" pin="CATHODE" pad="CATHODE"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESC" value="DIODE GEN PURP 20V 1A MINI3"/>
+<attribute name="DIGIKEY#" value="DB3X207K0LCT-ND"/>
+<attribute name="MANF" value="Panasonic Electronic Components"/>
+<attribute name="MANF#" value="DB3X207K0L"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MIC5528">
+<gates>
+<gate name="G$1" symbol="MIC5528" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MIC5528">
+<connects>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="GND@1" pad="GND@1"/>
+<connect gate="G$1" pin="GND@2" pad="GND@2"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+<connect gate="G$1" pin="VOUT@1" pad="VOUT@1"/>
+<connect gate="G$1" pin="VOUT@2" pad="VOUT@2"/>
 </connects>
 <technologies>
 <technology name=""/>

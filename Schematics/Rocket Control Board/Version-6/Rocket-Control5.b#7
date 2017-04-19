@@ -202,17 +202,6 @@
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
 </package>
-<package name="4-SOJ:CRYSTAL">
-<smd name="4:N/C" x="2.75" y="-1.6" dx="1.3" dy="1.9" layer="1"/>
-<smd name="3:N/C" x="2.75" y="1.6" dx="1.3" dy="1.9" layer="1"/>
-<smd name="1:CRYSTAL" x="-2.75" y="1.6" dx="1.3" dy="1.9" layer="1"/>
-<smd name="2:CRYSTAL" x="-2.75" y="-1.6" dx="1.3" dy="1.9" layer="1"/>
-<wire x1="-4" y1="1.6" x2="4" y2="1.6" width="0.127" layer="21"/>
-<wire x1="4" y1="1.6" x2="4" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="4" y1="-1.6" x2="-4" y2="-1.6" width="0.127" layer="21"/>
-<wire x1="-4" y1="-1.6" x2="-4" y2="1.6" width="0.127" layer="21"/>
-<text x="0" y="0" size="0.6096" layer="21" align="center">CRYSTAL</text>
-</package>
 <package name="10118194-0001LF">
 <smd name="3:D+" x="2.7" y="0" dx="1.35" dy="0.4" layer="1"/>
 <smd name="2:D-" x="2.7" y="0.65" dx="1.35" dy="0.4" layer="1"/>
@@ -342,6 +331,10 @@
 <wire x1="0.42545" y1="0" x2="0.23495" y2="0.127" width="0.0635" layer="21"/>
 <wire x1="0.42545" y1="-0.127" x2="0.42545" y2="0" width="0.0635" layer="21"/>
 <wire x1="0.42545" y1="0" x2="0.42545" y2="0.127" width="0.0635" layer="21"/>
+</package>
+<package name="ABS07-32.768KHZ-T">
+<smd name="P$1" x="-1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
+<smd name="P$2" x="1.25" y="0" dx="1.9" dy="1.1" layer="1" rot="R90"/>
 </package>
 </packages>
 </library>
@@ -536,175 +529,190 @@ design rules under a new name.</description>
 <elements>
 <element name="ARM-CORTEX-MO+" library="RocketControlBoard" package="TQFP48" value="ATSAML21G18B-AUT" x="10.795" y="16.51" rot="R45">
 <attribute name="DESC" value="IC MCU 32BIT 256KB FLASH 48TQFP" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
-<attribute name="DIGIKEY" value="ATSAML21G18B-AUTCT-ND" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
-<attribute name="MF" value="Microchip Technology" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
-<attribute name="MPN" value="ATSAML21G18B-AUT" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="DIGIKEY#" value="ATSAML21G18B-AUTCT-ND" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="MANF" value="Microchip Technology" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
+<attribute name="MANF#" value="ATSAML21G18B-AUT" x="10.795" y="16.51" size="1.778" layer="27" rot="R45" display="off"/>
 </element>
-<element name="CRYSTAL-CAP-2" library="RocketControlBoard" package="C0603" value="6.8pF" x="12.5984" y="4.191" rot="R180">
-<attribute name="DIGIKEY" value="1276-2332-1-ND" x="12.5984" y="4.191" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="12.5984" y="4.191" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="CL10C6R8BB8NNNC" x="12.5984" y="4.191" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DESC" value="CAP CER 6.8PF 50V NP0 0603" x="12.5984" y="4.191" size="1.778" layer="27" rot="R180" display="off"/>
-</element>
-<element name="CRYSTAL-CAP-1" library="RocketControlBoard" package="C0603" value="6.8pF" x="12.5984" y="6.2484" rot="R180">
-<attribute name="DESC" value="CAP CER 6.8PF 50V NP0 0603" x="12.5984" y="6.2484" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY" value="1276-2332-1-ND" x="12.5984" y="6.2484" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="12.5984" y="6.2484" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="CL10C6R8BB8NNNC" x="12.5984" y="6.2484" size="1.778" layer="27" rot="R180" display="off"/>
-</element>
-<element name="OSC-CRYSTAL" library="RocketControlBoard" package="4-SOJ:CRYSTAL" value="ABS25-32.768KHZ-6-T" x="7.0866" y="6.8326" rot="R180">
-<attribute name="DESC" value="CRYSTAL 32.7680KHZ 6PF SMD" x="7.0866" y="6.8326" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY" value="535-10240-1-ND" x="7.0866" y="6.8326" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="Abracon LLC" x="7.0866" y="6.8326" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="ABS25-32.768KHZ-6-T" x="7.0866" y="6.8326" size="1.778" layer="27" rot="R180" display="off"/>
-</element>
-<element name="FERRITE-BEAD" library="RocketControlBoard" package="C0603" value="BLM18PG471SN1D" x="15.7226" y="7.0358">
-<attribute name="DESC" value="FERRITE BEAD 470 OHM 0603 1LN" x="15.7226" y="7.0358" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY" value="490-5223-1-ND" x="15.7226" y="7.0358" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Murata Electronics North America" x="15.7226" y="7.0358" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="BLM18PG471SN1D" x="15.7226" y="7.0358" size="1.778" layer="27" display="off"/>
+<element name="FERRITE-BEAD" library="RocketControlBoard" package="C0603" value="BLM18PG471SN1D" x="16.4338" y="8.8138">
+<attribute name="DESC" value="FERRITE BEAD 470 OHM 0603 1LN" x="16.4338" y="8.8138" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY#" value="490-5223-1-ND" x="16.4338" y="8.8138" size="1.778" layer="27" display="off"/>
+<attribute name="MANF" value="Murata Electronics North America" x="16.4338" y="8.8138" size="1.778" layer="27" display="off"/>
+<attribute name="MANF#" value="BLM18PG471SN1D" x="16.4338" y="8.8138" size="1.778" layer="27" display="off"/>
 </element>
 <element name="VDDIO-2" library="RocketControlBoard" package="C0402" value="0.1uF" x="15.9258" y="21.1074" rot="R270">
 <attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="1276-1022-1-ND" x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CL05A104KP5NNNC" x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND" x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CL05A104KP5NNNC" x="15.9258" y="21.1074" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="VDDIO-1" library="RocketControlBoard" package="C0402" value="0.1uF" x="4.1656" y="17.526" rot="R270">
 <attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="1276-1022-1-ND" x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CL05A104KP5NNNC" x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND" x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CL05A104KP5NNNC" x="4.1656" y="17.526" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="MICRO-USB-CONNECTOR" library="RocketControlBoard" package="10118194-0001LF" value="10118194-0001LF" x="8.6614" y="36.7284" rot="R270">
-<attribute name="DIGIKEY" value="609-4618-1-ND" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="609-4618-1-ND" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Amphenol FCI" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="10118194-0001LF" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
 <attribute name="DESC" value="CONN USB MICRO B RECPT SMT R/A" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Amphenol FCI" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="10118194-0001LF" x="8.6614" y="36.7284" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="JTAG-CONNECTOR" library="RocketControlBoard" package="JTAG-MINI" value="JTAG-MINI" x="10.3124" y="0.7112" rot="R90">
 <attribute name="DESC" value="CONN HEADER 10POS UNSHD VERT T/H" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY" value="609-3712-ND" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Amphenol FCI" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="20021111-00010T4LF" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="609-3712-ND" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Amphenol FCI" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="20021111-00010T4LF" x="10.3124" y="0.7112" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="SPI-PORT" library="RocketControlBoard" package="SPI-PORT" value="SPI-PORT" x="13.97" y="26.67"/>
-<element name="HEADER-SIDE-A" library="RocketControlBoard" package="HEADER-SIDE-A" value="HEADER-SIDE-A" x="19.05" y="16.51"/>
-<element name="HEADER-SIDE-B" library="RocketControlBoard" package="HEADER-SIDE-B" value="HEADER-SIDE-B" x="1.27" y="39.37" rot="R90"/>
+<element name="SPI-PORT" library="RocketControlBoard" package="SPI-PORT" value="SPI-PORT" x="13.97" y="26.67">
+<attribute name="NOTE" value="The 40 piece header fits the SPI port." x="13.97" y="26.67" size="1.778" layer="27" display="off"/>
+</element>
+<element name="HEADER-SIDE-A" library="RocketControlBoard" package="HEADER-SIDE-A" value="HEADER-SIDE-A" x="19.05" y="16.51">
+<attribute name="DESC" value="CONN HEADER .100&quot; SNGL STR 40POS " x="19.05" y="16.51" size="1.778" layer="27" display="off"/>
+<attribute name="NOTE" value="One strip appears on the BOM. " x="19.05" y="16.51" size="1.778" layer="27" display="off"/>
+</element>
+<element name="HEADER-SIDE-B" library="RocketControlBoard" package="HEADER-SIDE-B" value="HEADER-SIDE-B" x="1.27" y="39.37" rot="R90">
+<attribute name="DESC" value="CONN HEADER .100&quot; SNGL STR 40POS " x="1.27" y="39.37" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="S1011EC-40-ND" x="1.27" y="39.37" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Sullins Connector Solutions" x="1.27" y="39.37" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="PRPC040SAAN-RC" x="1.27" y="39.37" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
 <element name="REGULATOR-3.3V" library="RocketControlBoard" package="8-WFDFN-EXPOSED-PAD" value="TPS62172DSGR" x="7.3914" y="30.0736" rot="R180">
 <attribute name="DESC" value="IC REG BUCK 3.3V 0.5A SYNC 8WSON" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY" value="296-39449-1-ND" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="Texas Instruments" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="TPS62172DSGR" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY#" value="296-39449-1-ND" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANF" value="Texas Instruments" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANF#" value="TPS62172DSGR" x="7.3914" y="30.0736" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="REGULATOR-IN-CAPACITOR" library="RocketControlBoard" package="C0402" value="10uF" x="4.1656" y="29.9466" rot="R90">
 <attribute name="DESC" value="CAP CER 10UF 10V X5R 0402" x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY" value="1276-1450-1-ND" x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="CL05A106MP5NUNC" x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1450-1-ND" x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL05A106MP5NUNC" x="4.1656" y="29.9466" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="REGULATOR-OUT-CAPACITOR" library="RocketControlBoard" package="C0402" value="22uF" x="4.1656" y="26.8224" rot="R270">
 <attribute name="DESC" value="CAP CER 22UF 6.3V X5R 0402" x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="1276-6834-1-ND" x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CL05A226MQ5QUNC" x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-6834-1-ND" x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CL05A226MQ5QUNC" x="4.1656" y="26.8224" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="REGULATOR-OUT-INDUCTOR" library="RocketControlBoard" package="C0603" value="2.2uH" x="6.4516" y="25.2984" rot="R270">
 <attribute name="DESC" value="FIXED IND 2.2UH 600MA 170 MOHM" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="445-3606-1-ND" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="TDK Corporation" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="GLFR1608T2R2M-LR" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="445-3606-1-ND" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="TDK Corporation" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="GLFR1608T2R2M-LR" x="6.4516" y="25.2984" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="DIODE-USB" library="RocketControlBoard" package="SOD-882" value="CTS05S40,L3F" x="6.9088" y="31.9024" rot="R270">
 <attribute name="DESC" value="DIODE SCHOTTKY 40V 500MA CST2" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="CTS05S40L3FCT-ND" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Toshiba Semiconductor and Storage" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CTS05S40,L3F" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="CTS05S40L3FCT-ND" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Toshiba Semiconductor and Storage" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CTS05S40,L3F" x="6.9088" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="DIODE-VIN" library="RocketControlBoard" package="SOD-882" value="CTS05S40,L3F" x="5.9436" y="31.9024" rot="R270">
-<attribute name="DESCV" value="DIODE SCHOTTKY 40V 500MA CST2" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="CTS05S40L3FCT-ND" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Toshiba Semiconductor and Storage" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CTS05S40,L3F" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DESC" value="DIODE SCHOTTKY 40V 500MA CST2" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="CTS05S40L3FCT-ND" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Toshiba Semiconductor and Storage" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CTS05S40,L3F" x="5.9436" y="31.9024" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="POWER-LED" library="RocketControlBoard" package="C0603" value="APTD1608ZGC" x="15.113" y="36.7284">
-<attribute name="DESC" value=" LED GREEN CLEAR 0603 SMD " x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
-<attribute name="DIGIKEY" value="754-1547-1-ND" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
-<attribute name="MF" value="Kingbright" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
-<attribute name="MPN" value="APTD1608ZGC" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
+<attribute name="DESC" value="LED GREEN CLEAR 0603 SMD" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
+<attribute name="DIGIKEY#" value="754-1547-1-ND" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
+<attribute name="MANF" value="Kingbright" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
+<attribute name="MANF#" value="APTD1608ZGC" x="15.113" y="36.7284" size="1.778" layer="27" display="off"/>
 </element>
 <element name="LED-RESISTOR" library="RocketControlBoard" package="C0603" value="330" x="15.113" y="34.4424" rot="R180">
 <attribute name="DESC" value="RES SMD 330 OHM 5% 1/10W 0603 " x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="DIGIKEY" value="1276-5050-1-ND" x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="MPN" value="RC1608J331CS" x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY#" value="1276-5050-1-ND" x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANF#" value="RC1608J331CS" x="15.113" y="34.4424" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="SDA-PULLUP" library="RocketControlBoard" package="C0402" value="4.7k" x="4.1656" y="23.7236" rot="R270"/>
-<element name="SCL-PULLUP" library="RocketControlBoard" package="C0402" value="4.7k" x="4.1656" y="20.6248" rot="R270"/>
+<element name="SDA-PULLUP" library="RocketControlBoard" package="C0402" value="4.7k" x="4.1656" y="23.7236" rot="R270">
+<attribute name="DESC" value="RES SMD 4.7K OHM 5% 1/10W 0603" x="4.1656" y="23.7236" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-5078-1-ND" x="4.1656" y="23.7236" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="23.7236" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="RC1608J472CS" x="4.1656" y="23.7236" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
+<element name="SCL-PULLUP" library="RocketControlBoard" package="C0402" value="4.7k" x="4.1656" y="20.6248" rot="R270">
+<attribute name="DESC" value="RES SMD 4.7K OHM 5% 1/10W 0603" x="4.1656" y="20.6248" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-5078-1-ND" x="4.1656" y="20.6248" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="4.1656" y="20.6248" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="RC1608J472CS" x="4.1656" y="20.6248" size="1.778" layer="27" rot="R270" display="off"/>
+</element>
 <element name="VIN-CAPACITOR" library="RocketControlBoard" package="C0402" value="0.1uF" x="7.1374" y="10.8204" rot="R270">
 <attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="1276-1022-1-ND" x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CL05A104KP5NNNC" x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND" x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CL05A104KP5NNNC" x="7.1374" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="VDDCORE-CAPACITOR" library="RocketControlBoard" package="C0402" value="0.1uF" x="5.9436" y="10.8204" rot="R270">
 <attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="DIGIKEY" value="1276-1022-1-ND" x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
-<attribute name="MPN" value="CL05A104KP5NNNC" x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND" x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MANF#" value="CL05A104KP5NNNC" x="5.9436" y="10.8204" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="AREF-CAPACITOR-1" library="RocketControlBoard" package="C0402" value="0.1uF" x="12.065" y="9.2456" rot="R90">
-<attribute name="DESC" value=" CAP CER 0.1UF 10V X5R 0402 " x="12.065" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY" value="1276-1022-1-ND" x="12.065" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="12.065" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="CL05A104KP5NNNC" x="12.065" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="AREF-CAPACITOR-1" library="RocketControlBoard" package="C0402" value="0.1uF" x="12.96451875" y="9.30511875" rot="R90">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="12.96451875" y="9.30511875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND" x="12.96451875" y="9.30511875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="12.96451875" y="9.30511875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL05A104KP5NNNC" x="12.96451875" y="9.30511875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="AREF-CAPACITOR-2" library="RocketControlBoard" package="C0402" value="4.7uF" x="13.5636" y="9.2456" rot="R90">
-<attribute name="DESC" value="CAP CER 0.47UF 10V X5R 0402" x="13.5636" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY" value="1276-1173-1-ND" x="13.5636" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="13.5636" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="CL05A474KP5NNNC" x="13.5636" y="9.2456" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="AREF-CAPACITOR-2" library="RocketControlBoard" package="C0402" value="4.7uF" x="14.20295625" y="9.99016875" rot="R90">
+<attribute name="DESC" value="CAP CER 0.47UF 10V X5R 0402" x="14.20295625" y="9.99016875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1173-1-ND" x="14.20295625" y="9.99016875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="14.20295625" y="9.99016875" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL05A474KP5NNNC" x="14.20295625" y="9.99016875" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="ANALOG-CAPACITOR-1" library="RocketControlBoard" package="C0402" value="0.1uF" x="14.986" y="10.287" rot="R90">
-<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="14.986" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DIGIKEY" value="1276-1022-1-ND" x="14.986" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="14.986" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="CL05A104KP5NNNC" x="14.986" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="ANALOG-CAPACITOR-1" library="RocketControlBoard" package="C0402" value="0.1uF" x="15.4432" y="11.6078" rot="R90">
+<attribute name="DESC" value="CAP CER 0.1UF 10V X5R 0402" x="15.4432" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1022-1-ND" x="15.4432" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="15.4432" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL05A104KP5NNNC" x="15.4432" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="ANALOG-CAPACITOR-2" library="RocketControlBoard" package="C0402" value="10uF" x="16.4084" y="10.287" rot="R90">
-<attribute name="DIGIKEY" value="1276-1450-1-ND" x="16.4084" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DESC" value="CAP CER 10UF 10V X5R 0402 " x="16.4084" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MF" value="Samsung Electro-Mechanics America, Inc." x="16.4084" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="CL05A106MP5NUNC" x="16.4084" y="10.287" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="ANALOG-CAPACITOR-2" library="RocketControlBoard" package="C0402" value="10uF" x="16.6624" y="11.6078" rot="R90">
+<attribute name="DESC" value="CAP CER 10UF 10V X5R 0402" x="16.6624" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-1450-1-ND" x="16.6624" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="16.6624" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL05A106MP5NUNC" x="16.6624" y="11.6078" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="U$1" library="RocketControlBoard" package="ABS07-32.768KHZ-T" value="ABS07-32.768KHZ-T" x="10.3632" y="9.3726" rot="R180">
+<attribute name="DESC" value="CRYSTAL 32.7680KHZ 12.5PF SMD" x="10.3632" y="9.3726" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="DIGIKEY#" value="535-9542-1-ND" x="10.3632" y="9.3726" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANF" value="Abracon LLC" x="10.3632" y="9.3726" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MANF#" value="ABS07-32.768KHZ-T" x="10.3632" y="9.3726" size="1.778" layer="27" rot="R180" display="off"/>
+</element>
+<element name="OSC-CAPACITOR-1" library="RocketControlBoard" package="C0603" value="22pF" x="9.144" y="6.6294" rot="R90">
+<attribute name="DESC" value="CAP CER 22PF 50V NP0 0603" x="9.144" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-2229-1-ND" x="9.144" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="9.144" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL10C220JB8NNWC" x="9.144" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+</element>
+<element name="OSC-CAPACITOR-2" library="RocketControlBoard" package="C0603" value="22pF" x="11.3792" y="6.6294" rot="R90">
+<attribute name="DESC" value="CAP CER 22PF 50V NP0 0603" x="11.3792" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DIGIKEY#" value="1276-2229-1-ND" x="11.3792" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF" value="Samsung Electro-Mechanics America, Inc." x="11.3792" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MANF#" value="CL10C220JB8NNWC" x="11.3792" y="6.6294" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 </elements>
 <signals>
 <signal name="CRYSTAL-A">
 <contactref element="ARM-CORTEX-MO+" pad="1"/>
-<contactref element="OSC-CRYSTAL" pad="2:CRYSTAL"/>
-<contactref element="CRYSTAL-CAP-2" pad="2"/>
-<wire x1="11.855659375" y1="11.56025" x2="9.8366" y2="9.541190625" width="0.1524" layer="1"/>
-<wire x1="9.8366" y1="9.541190625" x2="9.8366" y2="8.4326" width="0.1524" layer="1"/>
-<wire x1="9.8366" y1="8.4326" x2="8.89" y2="7.486" width="0.1524" layer="1"/>
-<wire x1="8.89" y1="7.486" x2="8.89" y2="4.064" width="0.1524" layer="1"/>
-<wire x1="8.89" y1="4.064" x2="9.0932" y2="3.8608" width="0.1524" layer="1"/>
-<wire x1="9.0932" y1="3.8608" x2="10.9728" y2="3.8608" width="0.1524" layer="1"/>
-<wire x1="10.9728" y1="3.8608" x2="11.303" y2="4.191" width="0.1524" layer="1"/>
-<wire x1="11.303" y1="4.191" x2="11.7484" y2="4.191" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="P$2"/>
+<contactref element="OSC-CAPACITOR-1" pad="2"/>
+<wire x1="11.855659375" y1="11.56025" x2="11.30085" y2="11.56025" width="0.1524" layer="1"/>
+<wire x1="11.30085" y1="11.56025" x2="9.1132" y2="9.3726" width="0.1524" layer="1"/>
+<wire x1="9.1132" y1="9.3726" x2="9.144" y2="9.3418" width="0.1524" layer="1"/>
+<wire x1="9.144" y1="9.3418" x2="9.144" y2="7.4794" width="0.1524" layer="1"/>
 </signal>
 <signal name="CRYSTAL-B">
 <contactref element="ARM-CORTEX-MO+" pad="2"/>
-<contactref element="OSC-CRYSTAL" pad="1:CRYSTAL"/>
-<contactref element="CRYSTAL-CAP-1" pad="2"/>
-<wire x1="11.7484" y1="6.2484" x2="10.97219375" y2="5.443440625" width="0.1524" layer="1"/>
-<wire x1="10.97219375" y1="5.443440625" x2="10.377" y2="4.8262" width="0.1524" layer="1"/>
-<wire x1="10.377" y1="4.8262" x2="9.8366" y2="5.2326" width="0.1524" layer="1"/>
-<wire x1="12.2092125" y1="11.913803125" x2="12.8524" y2="11.270615625" width="0.1524" layer="1"/>
-<wire x1="12.8524" y1="11.270615625" x2="12.8524" y2="10.7442" width="0.1524" layer="1"/>
-<wire x1="12.8524" y1="10.7442" x2="12.6238" y2="10.5156" width="0.1524" layer="1"/>
-<wire x1="12.6238" y1="10.5156" x2="11.5062" y2="10.5156" width="0.1524" layer="1"/>
-<wire x1="11.5062" y1="10.5156" x2="10.97219375" y2="9.98159375" width="0.1524" layer="1"/>
-<wire x1="10.97219375" y1="9.98159375" x2="10.97219375" y2="5.443440625" width="0.1524" layer="1"/>
+<contactref element="U$1" pad="P$1"/>
+<contactref element="OSC-CAPACITOR-2" pad="2"/>
+<wire x1="12.2092125" y1="11.913803125" x2="12.9286" y2="11.194415625" width="0.1524" layer="1"/>
+<wire x1="12.9286" y1="11.194415625" x2="12.9286" y2="10.8204" width="0.1524" layer="1"/>
+<wire x1="12.9286" y1="10.8204" x2="12.7508" y2="10.6426" width="0.1524" layer="1"/>
+<wire x1="12.7508" y1="10.6426" x2="12.0396" y2="10.6426" width="0.1524" layer="1"/>
+<wire x1="12.0396" y1="10.6426" x2="11.6132" y2="10.2162" width="0.1524" layer="1"/>
+<wire x1="11.6132" y1="10.2162" x2="11.6132" y2="9.3726" width="0.1524" layer="1"/>
+<wire x1="11.6132" y1="9.3726" x2="11.3792" y2="9.1386" width="0.1524" layer="1"/>
+<wire x1="11.3792" y1="9.1386" x2="11.3792" y2="7.4794" width="0.1524" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="ARM-CORTEX-MO+" pad="5"/>
@@ -742,7 +750,7 @@ design rules under a new name.</description>
 <vertex x="11.2014" y="39.1922"/>
 <vertex x="-0.9652" y="39.1922"/>
 </polygon>
-<via x="15.748" y="8.5344" extent="1-16" drill="0.3302"/>
+<via x="16.002" y="10.0076" extent="1-16" drill="0.3302"/>
 <via x="4.8006" y="10.16" extent="1-16" drill="0.3302"/>
 <via x="15.9258" y="22.987" extent="1-16" drill="0.3302"/>
 <via x="7.7216" y="16.51" extent="1-16" drill="0.3302"/>
@@ -751,14 +759,9 @@ design rules under a new name.</description>
 <wire x1="15.9258" y1="26.0858" x2="15.9258" y2="22.987" width="0.1524" layer="1"/>
 <wire x1="4.8006" y1="11.684" x2="4.8006" y2="10.16" width="0.1524" layer="1"/>
 <wire x1="13.269871875" y1="12.974465625" x2="14.2494" y2="11.9949375" width="0.1524" layer="1"/>
-<wire x1="14.2494" y1="11.9949375" x2="14.2494" y2="8.9154" width="0.1524" layer="1"/>
 <wire x1="4.8006" y1="11.684" x2="5.9944" y2="12.8778" width="0.1524" layer="1"/>
 <wire x1="7.61301875" y1="13.681571875" x2="6.809246875" y2="12.8778" width="0.1524" layer="1"/>
 <wire x1="6.809246875" y1="12.8778" x2="5.9944" y2="12.8778" width="0.1524" layer="1"/>
-<wire x1="14.2494" y1="8.9154" x2="14.6304" y2="8.5344" width="0.1524" layer="1"/>
-<wire x1="14.6304" y1="8.5344" x2="15.748" y2="8.5344" width="0.1524" layer="1"/>
-<wire x1="14.986" y1="9.2964" x2="15.748" y2="8.5344" width="0.1524" layer="1"/>
-<wire x1="16.4846" y1="9.271" x2="15.748" y2="8.5344" width="0.1524" layer="1"/>
 <wire x1="15.9258" y1="21.7574" x2="15.9258" y2="22.987" width="0.1524" layer="1"/>
 <wire x1="6.198803125" y1="17.9242125" x2="7.613015625" y2="16.51" width="0.1524" layer="1"/>
 <wire x1="7.613015625" y1="16.51" x2="7.7216" y2="16.51" width="0.1524" layer="1"/>
@@ -775,24 +778,29 @@ design rules under a new name.</description>
 <wire x1="4.8006" y1="10.16" x2="4.811" y2="10.1704" width="0.1524" layer="1"/>
 <contactref element="AREF-CAPACITOR-1" pad="1"/>
 <contactref element="AREF-CAPACITOR-2" pad="1"/>
-<wire x1="12.065" y1="8.5956" x2="13.5636" y2="8.5956" width="0.1524" layer="1"/>
-<wire x1="13.5636" y1="8.5956" x2="13.9296" y2="8.5956" width="0.1524" layer="1"/>
-<wire x1="13.9296" y1="8.5956" x2="14.2494" y2="8.9154" width="0.1524" layer="1"/>
 <contactref element="ANALOG-CAPACITOR-1" pad="1"/>
 <contactref element="ANALOG-CAPACITOR-2" pad="1"/>
-<wire x1="14.986" y1="9.637" x2="14.986" y2="9.2964" width="0.1524" layer="1"/>
-<wire x1="16.4084" y1="9.637" x2="16.4084" y2="9.3472" width="0.1524" layer="1"/>
-<wire x1="16.4084" y1="9.3472" x2="16.4846" y2="9.271" width="0.1524" layer="1"/>
 <contactref element="VDDCORE-CAPACITOR" pad="2"/>
 <contactref element="VIN-CAPACITOR" pad="2"/>
 <wire x1="7.1374" y1="10.1704" x2="5.9436" y2="10.1704" width="0.1524" layer="1"/>
 <wire x1="5.9436" y1="10.1704" x2="5.9332" y2="10.16" width="0.1524" layer="1"/>
 <wire x1="5.9332" y1="10.16" x2="4.8006" y2="10.16" width="0.1524" layer="1"/>
-<contactref element="CRYSTAL-CAP-2" pad="1"/>
-<contactref element="CRYSTAL-CAP-1" pad="1"/>
-<wire x1="13.5636" y1="8.5956" x2="13.4484" y2="8.4804" width="0.1524" layer="1"/>
-<wire x1="13.4484" y1="8.4804" x2="13.4484" y2="6.2484" width="0.1524" layer="1"/>
-<wire x1="13.4484" y1="6.2484" x2="13.4484" y2="4.191" width="0.1524" layer="1"/>
+<contactref element="OSC-CAPACITOR-1" pad="1"/>
+<contactref element="OSC-CAPACITOR-2" pad="1"/>
+<wire x1="13.269871875" y1="12.974465625" x2="15.2865375" y2="10.9578" width="0.1524" layer="1"/>
+<wire x1="15.2865375" y1="10.9578" x2="15.4432" y2="10.9578" width="0.1524" layer="1"/>
+<wire x1="15.4432" y1="10.9578" x2="16.6624" y2="10.9578" width="0.1524" layer="1"/>
+<wire x1="16.002" y1="10.0076" x2="16.002" y2="10.399" width="0.1524" layer="1"/>
+<wire x1="16.002" y1="10.399" x2="15.4432" y2="10.9578" width="0.1524" layer="1"/>
+<wire x1="12.96451875" y1="8.65511875" x2="13.51790625" y2="8.65511875" width="0.1524" layer="1"/>
+<wire x1="13.51790625" y1="8.65511875" x2="14.20295625" y2="9.34016875" width="0.1524" layer="1"/>
+<wire x1="14.20295625" y1="9.34016875" x2="14.8703875" y2="10.0076" width="0.1524" layer="1"/>
+<wire x1="14.8703875" y1="10.0076" x2="16.002" y2="10.0076" width="0.1524" layer="1"/>
+<via x="10.2362" y="6.4516" extent="1-16" drill="0.3302"/>
+<wire x1="9.144" y1="5.7794" x2="9.564" y2="5.7794" width="0.1524" layer="1"/>
+<wire x1="9.564" y1="5.7794" x2="10.2362" y2="6.4516" width="0.1524" layer="1"/>
+<wire x1="11.3792" y1="5.7794" x2="10.9084" y2="5.7794" width="0.1524" layer="1"/>
+<wire x1="10.9084" y1="5.7794" x2="10.2362" y2="6.4516" width="0.1524" layer="1"/>
 </signal>
 <signal name="A0">
 <contactref element="ARM-CORTEX-MO+" pad="3"/>
@@ -807,7 +815,6 @@ design rules under a new name.</description>
 <signal name="AREF">
 <contactref element="ARM-CORTEX-MO+" pad="4"/>
 <contactref element="HEADER-SIDE-A" pad="AREF"/>
-<wire x1="12.91631875" y1="12.6209125" x2="13.5382" y2="11.99903125" width="0.1524" layer="1"/>
 <via x="11.5316" y="14.224" extent="1-16" drill="0.3302"/>
 <wire x1="12.91631875" y1="12.6209125" x2="11.5316" y2="14.00563125" width="0.1524" layer="1"/>
 <wire x1="11.5316" y1="14.00563125" x2="11.5316" y2="14.224" width="0.1524" layer="1"/>
@@ -818,9 +825,10 @@ design rules under a new name.</description>
 <wire x1="10.6172" y1="14.224" x2="10.1092" y2="13.716" width="0.1524" layer="16"/>
 <contactref element="AREF-CAPACITOR-1" pad="2"/>
 <contactref element="AREF-CAPACITOR-2" pad="2"/>
-<wire x1="13.5636" y1="9.8956" x2="13.5382" y2="9.921" width="0.1524" layer="1"/>
-<wire x1="13.5382" y1="9.921" x2="13.5382" y2="11.99903125" width="0.1524" layer="1"/>
-<wire x1="12.065" y1="9.8956" x2="13.5636" y2="9.8956" width="0.1524" layer="1"/>
+<wire x1="12.91631875" y1="12.6209125" x2="14.20295625" y2="11.334275" width="0.1524" layer="1"/>
+<wire x1="14.20295625" y1="11.334275" x2="14.20295625" y2="10.64016875" width="0.1524" layer="1"/>
+<wire x1="14.20295625" y1="10.64016875" x2="13.64956875" y2="10.64016875" width="0.1524" layer="1"/>
+<wire x1="13.64956875" y1="10.64016875" x2="12.96451875" y2="9.95511875" width="0.1524" layer="1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="FERRITE-BEAD" pad="1"/>
@@ -862,42 +870,41 @@ design rules under a new name.</description>
 <signal name="ANALOG-VDD">
 <contactref element="ARM-CORTEX-MO+" pad="6"/>
 <contactref element="FERRITE-BEAD" pad="2"/>
-<wire x1="13.623425" y1="13.32801875" x2="15.0114" y2="11.94004375" width="0.1524" layer="1"/>
-<wire x1="17.1958" y1="10.2512" x2="17.1958" y2="7.659" width="0.1524" layer="1"/>
-<wire x1="17.1958" y1="7.659" x2="16.5726" y2="7.0358" width="0.1524" layer="1"/>
 <contactref element="ANALOG-CAPACITOR-1" pad="2"/>
 <contactref element="ANALOG-CAPACITOR-2" pad="2"/>
-<wire x1="15.0114" y1="11.94004375" x2="15.0114" y2="10.9624" width="0.1524" layer="1"/>
-<wire x1="15.0114" y1="10.9624" x2="14.986" y2="10.937" width="0.1524" layer="1"/>
-<wire x1="14.986" y1="10.937" x2="16.4084" y2="10.937" width="0.1524" layer="1"/>
-<wire x1="16.4084" y1="10.937" x2="16.51" y2="10.937" width="0.1524" layer="1"/>
-<wire x1="16.51" y1="10.937" x2="17.1958" y2="10.2512" width="0.1524" layer="1"/>
+<wire x1="13.623425" y1="13.32801875" x2="14.69364375" y2="12.2578" width="0.1524" layer="1"/>
+<wire x1="14.69364375" y1="12.2578" x2="15.4432" y2="12.2578" width="0.1524" layer="1"/>
+<wire x1="15.4432" y1="12.2578" x2="16.6624" y2="12.2578" width="0.1524" layer="1"/>
+<wire x1="16.6624" y1="12.2578" x2="17.4752" y2="11.445" width="0.1524" layer="1"/>
+<wire x1="17.4752" y1="11.445" x2="17.4752" y2="9.0052" width="0.1524" layer="1"/>
+<wire x1="17.4752" y1="9.0052" x2="17.2838" y2="8.8138" width="0.1524" layer="1"/>
 </signal>
 <signal name="A1">
 <contactref element="ARM-CORTEX-MO+" pad="7"/>
 <contactref element="HEADER-SIDE-A" pad="A1"/>
-<wire x1="19.05" y1="6.35" x2="17.526" y2="7.874" width="0.1524" layer="1"/>
-<wire x1="13.976978125" y1="13.681571875" x2="16.07615" y2="11.5824" width="0.1524" layer="1"/>
-<wire x1="16.07615" y1="11.5824" x2="16.9926" y2="11.5824" width="0.1524" layer="1"/>
-<wire x1="16.9926" y1="11.5824" x2="17.526" y2="11.049" width="0.1524" layer="1"/>
-<wire x1="17.526" y1="11.049" x2="17.526" y2="7.874" width="0.1524" layer="1"/>
+<via x="12.2936" y="14.986" extent="1-16" drill="0.3302"/>
+<wire x1="15.24" y1="6.35" x2="19.05" y2="6.35" width="0.1524" layer="16"/>
+<wire x1="15.24" y1="6.35" x2="12.2936" y2="9.2964" width="0.1524" layer="16"/>
+<wire x1="12.2936" y1="9.2964" x2="12.2936" y2="14.986" width="0.1524" layer="16"/>
+<wire x1="13.976978125" y1="13.681571875" x2="12.67255" y2="14.986" width="0.1524" layer="1"/>
+<wire x1="12.67255" y1="14.986" x2="12.2936" y2="14.986" width="0.1524" layer="1"/>
 </signal>
 <signal name="A2">
 <contactref element="ARM-CORTEX-MO+" pad="8"/>
 <contactref element="HEADER-SIDE-A" pad="A2"/>
-<wire x1="19.05" y1="8.89" x2="17.8816" y2="10.0584" width="0.1524" layer="1"/>
-<wire x1="17.8816" y1="10.0584" x2="17.8816" y2="11.2014" width="0.1524" layer="1"/>
-<wire x1="14.33053125" y1="14.035125" x2="16.37685625" y2="11.9888" width="0.1524" layer="1"/>
-<wire x1="17.8816" y1="11.2014" x2="17.0942" y2="11.9888" width="0.1524" layer="1"/>
-<wire x1="17.0942" y1="11.9888" x2="16.37685625" y2="11.9888" width="0.1524" layer="1"/>
+<wire x1="14.33053125" y1="14.035125" x2="15.10685625" y2="13.2588" width="0.1524" layer="1"/>
+<wire x1="15.10685625" y1="13.2588" x2="17.272" y2="13.2588" width="0.1524" layer="1"/>
+<wire x1="17.272" y1="13.2588" x2="17.9324" y2="12.5984" width="0.1524" layer="1"/>
+<wire x1="17.9324" y1="12.5984" x2="17.9324" y2="10.0076" width="0.1524" layer="1"/>
+<wire x1="17.9324" y1="10.0076" x2="19.05" y2="8.89" width="0.1524" layer="1"/>
 </signal>
 <signal name="A3">
 <contactref element="ARM-CORTEX-MO+" pad="9"/>
 <contactref element="HEADER-SIDE-A" pad="A3"/>
-<wire x1="19.05" y1="11.43" x2="18.1864" y2="11.43" width="0.1524" layer="1"/>
-<wire x1="16.6775625" y1="12.3952" x2="14.684084375" y2="14.388678125" width="0.1524" layer="1"/>
-<wire x1="18.1864" y1="11.43" x2="17.2212" y2="12.3952" width="0.1524" layer="1"/>
-<wire x1="17.2212" y1="12.3952" x2="16.6775625" y2="12.3952" width="0.1524" layer="1"/>
+<wire x1="14.684084375" y1="14.388678125" x2="15.4583625" y2="13.6144" width="0.1524" layer="1"/>
+<wire x1="15.4583625" y1="13.6144" x2="17.8562" y2="13.6144" width="0.1524" layer="1"/>
+<wire x1="17.8562" y1="13.6144" x2="19.05" y2="12.4206" width="0.1524" layer="1"/>
+<wire x1="19.05" y1="12.4206" x2="19.05" y2="11.43" width="0.1524" layer="1"/>
 </signal>
 <signal name="A4">
 <contactref element="ARM-CORTEX-MO+" pad="10"/>
