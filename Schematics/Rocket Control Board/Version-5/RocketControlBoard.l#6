@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="7.6.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -679,6 +679,41 @@
 <smd name="ANODE" x="-0.95" y="-2.4" dx="1" dy="1" layer="1" rot="R90"/>
 <smd name="N/C" x="0.95" y="-2.4" dx="1" dy="1" layer="1" rot="R90"/>
 </package>
+<package name="MIC5528">
+<smd name="N/C" x="0" y="0.575" dx="0.45" dy="0.18" layer="1" rot="R90"/>
+<smd name="GND@2" x="0" y="0" dx="0.94" dy="0.3" layer="1" rot="R180"/>
+<smd name="VIN" x="-0.4" y="0.575" dx="0.45" dy="0.18" layer="1" rot="R90"/>
+<smd name="EN" x="0.4" y="0.575" dx="0.45" dy="0.18" layer="1" rot="R90"/>
+<smd name="VOUT@2" x="0" y="-0.575" dx="0.45" dy="0.18" layer="1" rot="R90"/>
+<smd name="VOUT@1" x="-0.4" y="-0.575" dx="0.45" dy="0.18" layer="1" rot="R90"/>
+<smd name="GND@1" x="0.4" y="-0.575" dx="0.45" dy="0.18" layer="1" rot="R90"/>
+<wire x1="-0.635" y1="-0.5715" x2="-0.635" y2="-0.9525" width="0.127" layer="21"/>
+<wire x1="-0.635" y1="-0.9525" x2="-0.381" y2="-0.9525" width="0.127" layer="21"/>
+</package>
+<package name="HALL-MOSFET-NEW">
+<smd name="D@2" x="-0.65" y="0.925" dx="0.35" dy="0.3" layer="1" rot="R90"/>
+<smd name="D@3" x="0" y="0.925" dx="0.35" dy="0.3" layer="1" rot="R90"/>
+<smd name="G@1" x="0.65" y="0.925" dx="0.35" dy="0.3" layer="1" rot="R90"/>
+<smd name="D@5" x="-0.65" y="-0.925" dx="0.35" dy="0.3" layer="1" rot="R90"/>
+<smd name="D#4" x="0" y="-0.925" dx="0.35" dy="0.3" layer="1" rot="R90"/>
+<smd name="S@2" x="0.65" y="-0.925" dx="0.35" dy="0.3" layer="1" rot="R90"/>
+<smd name="D@1" x="-0.325" y="0" dx="1.5" dy="0.95" layer="1" rot="R90"/>
+<smd name="S@1" x="0.6675" y="0" dx="0.87" dy="0.235" layer="1" rot="R90"/>
+</package>
+<package name="HALL-HALL-NEW">
+<smd name="GND" x="-0.325" y="0.84" dx="0.52" dy="0.3" layer="1" rot="R90"/>
+<smd name="VDD" x="0.325" y="0.84" dx="0.52" dy="0.3" layer="1" rot="R90"/>
+<smd name="CE" x="-0.325" y="-0.84" dx="0.52" dy="0.3" layer="1" rot="R90"/>
+<smd name="OUT" x="0.325" y="-0.84" dx="0.52" dy="0.3" layer="1" rot="R90"/>
+<circle x="0.635" y="1.27" radius="0.0635" width="0.127" layer="21"/>
+</package>
+<package name="HALL-REG-NEW">
+<smd name="5" x="-0.5" y="2.4" dx="1.3" dy="0.5" layer="1"/>
+<smd name="4" x="0.95" y="2.4" dx="0.4" dy="0.5" layer="1"/>
+<smd name="1" x="-0.95" y="0" dx="0.4" dy="0.5" layer="1"/>
+<smd name="2" x="0" y="0" dx="0.75" dy="0.5" layer="1"/>
+<smd name="3" x="0.95" y="0" dx="0.4" dy="0.5" layer="1"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ATSAML21G18B-AUT">
@@ -1257,6 +1292,68 @@ USB</text>
 <wire x1="-5.08" y1="-5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="0" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-5.08" y1="-5.08" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+</symbol>
+<symbol name="MIC5528">
+<pin name="VOUT@1" x="-7.62" y="0" length="middle"/>
+<pin name="VOUT@2" x="-7.62" y="-2.54" length="middle"/>
+<pin name="VIN" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="EN" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="17.78" y2="2.54" width="0.254" layer="94"/>
+<wire x1="17.78" y1="2.54" x2="17.78" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<pin name="GND@2" x="-7.62" y="-5.08" length="middle"/>
+<pin name="GND@1" x="22.86" y="-5.08" length="middle" rot="R180"/>
+</symbol>
+<symbol name="HALL-MOSFET-NEW">
+<pin name="G" x="-10.16" y="-2.54" length="middle"/>
+<pin name="D" x="0" y="10.16" length="middle" rot="R270"/>
+<pin name="S" x="0" y="-10.16" length="middle" rot="R90"/>
+<wire x1="0" y1="-3.81" x2="2.54" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-3.81" x2="2.54" y2="0.762" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0.762" x2="2.54" y2="3.81" width="0.254" layer="94"/>
+<wire x1="2.54" y1="3.81" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="1.524" y1="0.762" x2="2.54" y2="0.762" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0.762" x2="3.556" y2="0.762" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0.762" x2="1.524" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-0.254" x2="3.556" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="3.556" y1="-0.254" x2="2.54" y2="0.762" width="0.254" layer="94"/>
+<wire x1="0" y1="-3.81" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-2.032" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="0" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="0" x2="-1.524" y2="0.508" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="0.508" x2="-1.524" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="-1.524" y1="-0.508" x2="-2.032" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-3.302" y1="2.286" x2="-3.302" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-3.302" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="3.81" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-3.81" width="0.254" layer="94"/>
+</symbol>
+<symbol name="HALL-HALL-NEW">
+<pin name="VDD" x="-7.62" y="5.08" length="middle"/>
+<pin name="GND" x="-7.62" y="2.54" length="middle"/>
+<pin name="CE" x="-7.62" y="0" length="middle"/>
+<pin name="OUT" x="-7.62" y="-2.54" length="middle"/>
+<wire x1="-2.54" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-5.08" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+</symbol>
+<symbol name="HALL-REG-NEW">
+<pin name="_INH" x="-7.62" y="2.54" length="middle"/>
+<pin name="I" x="-7.62" y="0" length="middle"/>
+<pin name="GND" x="-7.62" y="-2.54" length="middle"/>
+<pin name="Q" x="-7.62" y="-5.08" length="middle"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="7.62" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="5.08" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -2076,6 +2173,84 @@ USB</text>
 <attribute name="MANF" value="Panasonic Electronic Components"/>
 <attribute name="MANF#" value="DB3X207K0L"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MIC5528">
+<gates>
+<gate name="G$1" symbol="MIC5528" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MIC5528">
+<connects>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="GND@1" pad="GND@1"/>
+<connect gate="G$1" pin="GND@2" pad="GND@2"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+<connect gate="G$1" pin="VOUT@1" pad="VOUT@1"/>
+<connect gate="G$1" pin="VOUT@2" pad="VOUT@2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DESC" value="IC REG LDO 3.3V 0.5A 6TDFN"/>
+<attribute name="DIGIKEY#" value="MIC5528-3.3YMT-TR"/>
+<attribute name="MANF" value="Microchip Technology"/>
+<attribute name="MANF#" value="MIC5528-3.3YMT-TR"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HALL-MOSFET-NEW">
+<gates>
+<gate name="G$1" symbol="HALL-MOSFET-NEW" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HALL-MOSFET-NEW">
+<connects>
+<connect gate="G$1" pin="D" pad="D#4 D@1 D@2 D@3 D@5"/>
+<connect gate="G$1" pin="G" pad="G@1"/>
+<connect gate="G$1" pin="S" pad="S@1 S@2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HALL-HALL-NEW">
+<gates>
+<gate name="G$1" symbol="HALL-HALL-NEW" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HALL-HALL-NEW">
+<connects>
+<connect gate="G$1" pin="CE" pad="CE"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="OUT" pad="OUT"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="HALL-REG-NEW">
+<gates>
+<gate name="G$1" symbol="HALL-REG-NEW" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="HALL-REG-NEW">
+<connects>
+<connect gate="G$1" pin="GND" pad="2 5"/>
+<connect gate="G$1" pin="I" pad="3"/>
+<connect gate="G$1" pin="Q" pad="4"/>
+<connect gate="G$1" pin="_INH" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>

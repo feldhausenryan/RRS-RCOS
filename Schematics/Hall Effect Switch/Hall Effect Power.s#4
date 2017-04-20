@@ -58,6 +58,36 @@
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
+<library name="ROCKET CLUB">
+<packages>
+<package name="SINGLE_WIRE">
+<pad name="P$1" x="0" y="0" drill="0.95" shape="long"/>
+</package>
+</packages>
+<symbols>
+<symbol name="SINGLE_WIRE">
+<pin name="P$1" x="0" y="0" length="middle"/>
+<text x="-2.54" y="2.54" size="1.27" layer="94">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SINGLE_WIRE">
+<gates>
+<gate name="G$1" symbol="SINGLE_WIRE" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SINGLE_WIRE">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 <library name="RocketControlBoard">
 <packages>
 <package name="HALL-MOSFET-NEW">
@@ -329,6 +359,10 @@
 </class>
 </classes>
 <parts>
+<part name="BATTERY+" library="ROCKET CLUB" deviceset="SINGLE_WIRE" device=""/>
+<part name="BATTERY-" library="ROCKET CLUB" deviceset="SINGLE_WIRE" device=""/>
+<part name="OUTPUT+" library="ROCKET CLUB" deviceset="SINGLE_WIRE" device=""/>
+<part name="OUTPUT-" library="ROCKET CLUB" deviceset="SINGLE_WIRE" device=""/>
 <part name="U$1" library="RocketControlBoard" deviceset="HALL-MOSFET-NEW" device=""/>
 <part name="U$2" library="RocketControlBoard" deviceset="HALL-HALL-NEW" device=""/>
 <part name="U$3" library="RocketControlBoard" deviceset="HALL-REG-NEW" device=""/>
@@ -336,40 +370,42 @@
 <part name="3.3" library="RocketControlBoard" deviceset="RESISTOR" device="C0402"/>
 <part name="3.1" library="RocketControlBoard" deviceset="RESISTOR" device="C0402"/>
 <part name="U$4" library="RocketControlBoard" deviceset="SINGLE-WIRE" device=""/>
-<part name="U$5" library="RocketControlBoard" deviceset="SINGLE-WIRE" device=""/>
-<part name="U$6" library="RocketControlBoard" deviceset="SINGLE-WIRE" device=""/>
-<part name="U$7" library="RocketControlBoard" deviceset="SINGLE-WIRE" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
+<instance part="BATTERY+" gate="G$1" x="45.72" y="60.96"/>
+<instance part="BATTERY-" gate="G$1" x="81.28" y="60.96"/>
+<instance part="OUTPUT+" gate="G$1" x="58.42" y="27.94" rot="R180"/>
+<instance part="OUTPUT-" gate="G$1" x="58.42" y="15.24" rot="R180"/>
 <instance part="U$1" gate="G$1" x="68.58" y="35.56"/>
 <instance part="U$2" gate="G$1" x="27.94" y="30.48"/>
 <instance part="U$3" gate="G$1" x="27.94" y="50.8"/>
 <instance part="4.7UF" gate="G$1" x="5.08" y="33.02" rot="R90"/>
 <instance part="3.3" gate="G$1" x="5.08" y="15.24" rot="R90"/>
 <instance part="3.1" gate="G$1" x="48.26" y="33.02" rot="R180"/>
-<instance part="U$4" gate="G$1" x="53.34" y="15.24" rot="R180"/>
-<instance part="U$5" gate="G$1" x="53.34" y="25.4" rot="R180"/>
-<instance part="U$6" gate="G$1" x="40.64" y="60.96" rot="R180"/>
-<instance part="U$7" gate="G$1" x="76.2" y="60.96" rot="R180"/>
+<instance part="U$4" gate="G$1" x="55.88" y="7.62"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="VIN_OUT" class="0">
 <segment>
+<wire x1="68.58" y1="25.4" x2="58.42" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="OUTPUT+" gate="G$1" pin="P$1"/>
 <label x="68.58" y="25.4" size="1.778" layer="95"/>
 <pinref part="U$1" gate="G$1" pin="S"/>
-<pinref part="U$5" gate="G$1" pin="P$1"/>
-<wire x1="58.42" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
+<pinref part="BATTERY-" gate="G$1" pin="P$1"/>
+<wire x1="81.28" y1="15.24" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="81.28" y1="20.32" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="15.24" x2="58.42" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="OUTPUT-" gate="G$1" pin="P$1"/>
 <wire x1="12.7" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 <label x="88.9" y="48.26" size="1.778" layer="95"/>
 <pinref part="U$2" gate="G$1" pin="GND"/>
@@ -385,10 +421,8 @@
 <wire x1="5.08" y1="5.08" x2="12.7" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="12.7" y1="5.08" x2="12.7" y2="20.32" width="0.1524" layer="91"/>
 <junction x="12.7" y="20.32"/>
-<wire x1="58.42" y1="15.24" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="15.24" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
-<pinref part="U$4" gate="G$1" pin="P$1"/>
-<pinref part="U$7" gate="G$1" pin="P$1"/>
+<wire x1="55.88" y1="7.62" x2="81.28" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="81.28" y1="7.62" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="HALL_OUT" class="0">
@@ -404,6 +438,7 @@
 </net>
 <net name="VIN" class="0">
 <segment>
+<pinref part="BATTERY+" gate="G$1" pin="P$1"/>
 <wire x1="45.72" y1="60.96" x2="45.72" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="58.42" x2="45.72" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="45.72" y1="48.26" x2="68.58" y2="48.26" width="0.1524" layer="91"/>
@@ -419,7 +454,6 @@
 <wire x1="15.24" y1="50.8" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
 <junction x="15.24" y="53.34"/>
 <junction x="45.72" y="58.42"/>
-<pinref part="U$6" gate="G$1" pin="P$1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
